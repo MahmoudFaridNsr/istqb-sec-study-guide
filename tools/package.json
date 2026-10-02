@@ -1,0 +1,9 @@
+{
+  "name": "istqb-ct-sec-study-guide-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generators for the ISTQB CT-SEC (Advanced Level Security Tester) chapter study guides",
+  "dependencies": {
+    "docx": "^8.5.0"
+  }
+}
