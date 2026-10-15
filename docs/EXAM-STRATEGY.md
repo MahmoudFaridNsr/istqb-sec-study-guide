@@ -169,7 +169,7 @@ Report                summary (risk impact) → … → evaluation (detail by vu
       requires them; have evidence of experience ready if asked.
 - [ ] Confirm whether you qualify for the **25% non-native-language allowance** (30 extra minutes)
       — it usually has to be requested when booking.
-- [ ] Re-read Section 7 of each guide the night before; do not learn anything new.
+- [ ] Re-read Section 6 (revision notes) of each guide the night before; do not learn anything new.
 - [ ] In the first two minutes, note on scratch paper: **52 to pass · K2/K3/K4 = 1/2/3 ·
       six plan elements · six stakeholder benefits · production first · policy first**.
 - [ ] Give the K4s the time they are worth.

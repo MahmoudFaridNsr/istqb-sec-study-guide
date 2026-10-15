@@ -41,6 +41,7 @@ module.exports = function () {
     why: "**(c)** — official rationale: **the GNU license is free and it is an open source community so there is no vendor.** (a) and (b) **because there is no vendor**. (d) **the tool is free although you may have development costs in customizing the tool**. Syllabus §8.2.2: **the organization may need to have technical capacity available for support and specific configuration**." } });
 
   B.push({ h2: "Part B — 12 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   B.push({ q: { n: 4, tag: DER, meta: "LO: AS-8.1.1 (K2) | Syllabus §8.1", correct: ["b"],
     stem: "What is the main advantage of static analysis tools in security testing, according to the syllabus?",

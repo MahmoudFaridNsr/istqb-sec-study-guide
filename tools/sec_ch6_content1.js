@@ -137,33 +137,8 @@ module.exports = function () {
 
   // ================= SECTION 2 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 Attackers" });
-  B.push({ ul: [
-    "Humans are **largest threat and weakest defense**; the **biggest enablers** of attacks.",
-    "**Reconnaissance is the key phase**; published information **will** be found — “when”, not “if”.",
-    "Attackers follow **no policy**; strategy comes from collected information.",
-    "Tests valid at creation **lose coverage as published information changes**.",
-    "Passive: search engines, Shodan, social networks, GHDB, Whois, RIPE, DNS. Active: ping (Fping, Hping), scans (Nmap, Zenmap), OS detection (Nmap, Xprobe2), service fingerprinting.",
-    "Evidence hiding: NetCat, tunneling, log alteration, hide tools, rootkits, file streaming.",
-  ] });
-  B.push({ h2: "2.2 Motivation and forensics" });
-  B.push({ ul: [
-    "Insiders: many attacks; **revenge** mostly, rising **espionage/theft**. Externals: minority; curiosity, prestige, fame, challenge, boredom, **revenge (most dangerous)**.",
-    "Spectrum: **script kiddies → professional/governmental/hacktivist organizations**.",
-    "Incident = security policy disobeyed or breached [RFC 2828]. Forensics: **acquire and authenticate · analyze · report**.",
-    "Symptoms: suspicious logs, unexplained accounts, modified files, unusual services or behaviour, failed logins.",
-    "Steps: snapshot → authenticate and copy → analyze → eradicate → recover.",
-    "Tracing: logs, connections, Netstat, Tracert, IP Tracer, X-Originating-IP, Whois; proxies, Tor and botnets make it hard.",
-  ] });
-  B.push({ h2: "2.3 Social engineering and awareness" });
-  B.push({ ul: [
-    "Social engineering = **exploiting human behavior as an attack vector**; people trust and help strangers.",
-    "In person: tailgating, eavesdropping, shoulder surfing, telephone. Computer-based: malware email, chat, pop-ups, spam, phishing/spear phishing.",
-    "No single defense; least privilege, separation and rotation of duties; **main defense = education and awareness**.",
-    "Awareness: threat model changes; forgotten risks → withdrawn safeguards; regular training for developers, operations, management, staff; case studies with six questions.",
-  ] });
-  B.push({ h2: "2.4 Chapter 6 keyword glossary" });
+  B.push(...require("./sec_ch6_concepts")());
+  B.push({ h2: "2.5 Chapter 6 keyword glossary" });
   B.push({ table: { head: ["Keyword", "Working definition for the exam"], widths: [3.4, 10.6], rows: [
     ["**attacker**", "A person who attempts to breach security — insider or external, from script kiddie to state actor."],
     ["**botnet**", "A large number of previously compromised computers under an attacker’s control; hard to trace."],

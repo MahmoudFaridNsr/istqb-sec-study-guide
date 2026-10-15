@@ -1,4 +1,4 @@
-// CT-SEC Chapter 7 — Sections 5 to 7
+// CT-SEC Chapter 7 — Sections 5 and 6
 module.exports = function () {
   const B = [];
 
@@ -80,43 +80,18 @@ module.exports = function () {
 
   // ================= SECTION 6 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 6 — Flashcards" });
-  B.push({ lead: "Cover the back of each card and recall it from the front. All cards are drawn from Chapter 7 of the CTAL-SEC 2016 syllabus. Target: three clean passes before exam day." });
-  B.push({ flash: [
-    ["What determines security test completion?", "Evaluating results against **security expectations, exit criteria and/or acceptance criteria**."],
-    ["Why revise security expectations during a project?", "Not all risks are known at the outset; **expectations change** (e.g. a **new threat**) — so **revisit risk assessments** and feed planning and execution."],
-    ["Why reassess risk expectations frequently (official)?", "**Stakeholders make business decisions based on security risk levels.**"],
-    ["What is different about communicating security results?", "**The negative impact of communicating vulnerabilities to people other than direct stakeholders.**"],
-    ["Rule for sharing security results?", "**Only to those who need to know; being conservative is good practice** — the fewer the better."],
-    ["Why are security defects reported more precisely?", "They are **more sensitive**, usually **higher severity**, under **higher management focus**."],
-    ["Three qualities of status-report source data?", "**Timely, accurate, precise.**"],
-    ["Example of a reporting mechanism?", "A **security test dashboard**; agree with management **how and when** they access reports."],
-    ["Why report early?", "**More time to remediate vulnerabilities.**"],
-    ["Eight sections of a security test report?", "**Identifier · Summary · Variances · Comprehensive assessment · Summary of results · Evaluation · Summary of activities · Approvals.**"],
-    ["Summary subsections?", "**Executive summary · key findings.**"],
-    ["Variances subsections?", "**Process followed · variances from plan · methods and tools used.**"],
-    ["Comprehensive assessment subsections?", "**Coverage vs plan criteria · explanation of items not tested.**"],
-    ["Summary of results subsections?", "**Summarized results · resolved vulnerabilities and resolutions · unresolved vulnerabilities.**"],
-    ["Evaluation subsections?", "**Status vs exit criteria · risks (classifications) and impact of unresolved vulnerabilities.**"],
-    ["Four factors of reporting effectiveness?", "**Timing · content · recipients · tuning to recipients’ needs.**"],
-    ["Best way to emphasise risk in a report?", "**Risk impact in the summary, detailed later by specific vulnerabilities.**"],
-    ["Executive report vs architect report?", "**Different content** — multiple reports may be needed."],
-  ] });
-
-  // ================= SECTION 7 =================
-  B.push({ pagebreak: true });
-  B.push({ h1: "Section 7 — Revision Notes" });
-  B.push({ h2: "7.1 One-page chapter summary" });
+  B.push({ h1: "Section 6 — Revision Notes" });
+  B.push({ h2: "6.1 One-page chapter summary" });
   B.push({ p: "Completion is judged against security expectations, exit and acceptance criteria — which change as risks and stakeholder expectations change, so the risk assessment is revisited throughout. Security results reveal weaknesses that may also exist in production; share them only on a need-to-know basis. Security defects are more sensitive and severe, so their reporting must be precise, accurate and timely, through mechanisms such as a dashboard agreed with management. Report early. A report has eight sections; risk impact is summarised up front and detailed by vulnerability later; effectiveness depends on timing, content, recipients and tuning, often with different reports for different audiences." });
-  B.push({ h2: "7.2 Key definitions to memorize" });
+  B.push({ h2: "6.2 Key definitions to memorize" });
   B.push({ table: { head: ["Term", "Definition"], widths: [3.4, 10.6], rows: [
     ["Need to know", "Make security information available only to those who need it"],
     ["Security test dashboard", "Mechanism for timely, accurate, precise status access"],
     ["Interim report", "Report during testing — encouraged to allow remediation time"],
   ] } });
-  B.push({ h2: "7.3 High-priority concepts (study first)" });
+  B.push({ h2: "6.3 High-priority concepts (study first)" });
   B.push({ ol: ["Eight report sections; risk in summary + evaluation (3 pts).", "Revisit expectations (1 pt).", "Need to know; precision and severity (1 pt)."] });
-  B.push({ h2: "7.4 Last-minute revision sheet" });
+  B.push({ h2: "6.4 Last-minute revision sheet" });
   B.push({ box: { kind: "ok", title: "If you read nothing else", body: [
     "Expectations change → revisit risk assessment; stakeholders decide acceptable risk.",
     "Results: **the fewer people that know the better**; limited parts to developers and infrastructure.",
@@ -124,7 +99,7 @@ module.exports = function () {
     "Report: Identifier · Summary (exec, key findings) · Variances · Comprehensive assessment · Results · Evaluation · Activities · Approvals.",
     "Risk: **summary + later detail by vulnerability**.",
   ] } });
-  B.push({ h2: "7.5 Memorization checklist" });
+  B.push({ h2: "6.5 Memorization checklist" });
   B.push({ table: { head: ["✓", "I can…"], widths: [0.8, 13.2], rows: [
     ["☐", "explain why acceptance criteria and expectations are revised"],
     ["☐", "explain need-to-know for security results"],
@@ -132,7 +107,7 @@ module.exports = function () {
     ["☐", "list the eight report sections with subsections"],
     ["☐", "assess a report for accuracy, understandability and appropriateness"],
   ] } });
-  B.push({ h2: "7.6 Exam-day quick review" });
+  B.push({ h2: "6.6 Exam-day quick review" });
   B.push({ p: "**Top line, then detail. Fewer is better. Expectations should change.**" });
 
   return B;

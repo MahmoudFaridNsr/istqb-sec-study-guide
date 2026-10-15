@@ -1,4 +1,4 @@
-// CT-SEC Chapter 1 — Sections 5 to 7
+// CT-SEC Chapter 1 — Sections 5 and 6
 module.exports = function () {
   const B = [];
 
@@ -105,59 +105,13 @@ module.exports = function () {
 
   // ================= SECTION 6 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 6 — Flashcards" });
-  B.push({ lead: "Cover the back of each card and recall it from the front. All cards are drawn from Chapter 1 of the CTAL-SEC 2016 syllabus. Target: three clean passes before exam day." });
-  B.push({ flash: [
-    ["What are security test objectives based on?", "**Security risks**, identified through a **security risk assessment**."],
-    ["Define risk (as the syllabus does).", "A measure of the extent to which an entity is threatened by a potential circumstance or event — typically a function of **adverse impact** and **likelihood of occurrence**."],
-    ["What are information security risks?", "Risks arising from the **loss of confidentiality, integrity or availability** of information or information systems [NIST 800-30]."],
-    ["Name four things a security risk assessment gives the tester.", "A **source for planning and design** · a basis to **prioritize** tests by risk exposure · **alignment with business security objectives** · understanding of **which assets are at risk and how much**."],
-    ["When does risk-based prioritization actually align tests with business objectives?", "Only when the assessment **accurately reflects the organization’s threats, the impacted stakeholders and the assets to be protected**."],
-    ["How often should security risk assessments be performed?", "**At regular intervals** — some organizations every **3–6 months**, others **annually** — depending on the **degree of change**."],
-    ["Two remedies for missing risk information?", "**Use an established methodology as a checklist** (e.g. NIST 800-30) and **get input from multiple people**."],
-    ["The five asset questions?", "**Which** assets are valuable · **how valuable** · **where** located · **how accessed** · **how secured**."],
-    ["Three physical or intangible assets?", "**Physical prototypes** under development · **the ability to deliver services** · **company reputation and trust**."],
-    ["Five ways to value a digital asset?", "**Future revenue** · **value to a competitor** · **time and effort to recreate** · **fines for not producing it** (audit, lawsuit) · **fines for losing customer data**."],
-    ["Four common ways digital assets are accessed?", "**LAN / Wi-Fi** · **VPN or cloud drive** · **physical media passed person to person** · **email**."],
-    ["Three external stakeholders in a security risk assessment?", "**Customers and users** · **the public and society** · **regulatory agencies**."],
-    ["Why include regulatory agencies?", "**Necessary for ensuring compliance with applicable laws** regarding information security."],
-    ["NIST 800-30 — preparing tasks?", "Identify **purpose · scope · assumptions and constraints · information sources · risk model and analytic approaches**."],
-    ["NIST 800-30 — conducting tasks, in order?", "**Threat sources → threat events → vulnerabilities and predisposing conditions → likelihood → adverse impacts.**"],
-    ["NIST 800-30 — communicating tasks?", "**Communicate** results · **share** information to support other risk management activities."],
-    ["What should be the basis of all security policies?", "**A security risk assessment.**"],
-    ["Policy vs procedure?", "Policies, standards and guidelines describe **what controls should be in place**; a procedure explains **how to implement them, step by step** (and how to respond to a specific incident)."],
-    ["Which policy often prohibits adding routers and hot spots?", "**Network Access.**"],
-    ["Which policy prevents rights in excess of what a task needs?", "**Minimum Access.**"],
-    ["Data classification levels in order?", "**Public · Confidential (default) · Highly confidential · Private · Secret.**"],
-    ["What makes “secret” different from “highly confidential”?", "Secret data comes **from an external party**, must not become known inside or outside, and **may have no tangible value for the organization itself** — so it is **not a trade secret**."],
-    ["Who classifies data?", "**The business area that creates it.**"],
-    ["What must be defined before evaluating policies and procedures?", "The **objective(s)** of the evaluation and **criteria** to judge adequacy (e.g. **COBIT, ISO 27001, PCI**); then resources, measures, location and a **checklist**."],
-    ["Define security controls.", "**Technical or administrative safeguards or countermeasures to avoid, counteract or minimize loss or unavailability** due to threats acting on their matching vulnerability [Northcutt]."],
-    ["Control types and functions?", "Types: **administrative, technical, physical.** Functions: **preventive, detective, corrective, recovery.** Provide controls **from each category**."],
-    ["What risk do security tests of policies target?", "That a policy **may be in place, may be followed, but is not effective** in protecting assets."],
-    ["Define a security audit.", "A **manual examination and evaluation** that identifies weaknesses in an organization’s security processes and infrastructure."],
-    ["Audit scope vs test scope?", "Audit scope is **much larger** — it covers procedures, policies and controls **difficult to test directly**. Testing focuses on **technologies** (firewall configuration, authentication and encryption, user rights)."],
-    ["The five pillars of security auditing?", "**Assessment · Prevention · Detection · Reaction · Recovery.**"],
-    ["Key indicator of an organization’s security effectiveness?", "**The speed and efficiency of incident response** (reaction)."],
-    ["Name five things a security audit might detect.", "Inadequate **physical security** · **password maintenance** · **user rights and sharing** · **server-level security** · **application of vendor security updates** (also IDS, response plans)."],
-    ["Define risk exposure.", "**Potential impact or loss × likelihood** of that loss occurring."],
-    ["Five NIST risk factors?", "**Threat · vulnerability · impact · likelihood · predisposing condition.**"],
-    ["Four types of threat source?", "**Hostile cyber or physical attacks · human errors of omission or commission · structural failures of organization-controlled resources · natural and man-made disasters beyond the organization’s control.**"],
-    ["Adversarial likelihood is based on…?", "**Adversary intent, capability and targeting.**"],
-    ["Medium likelihood + high impact = ?", "**High** severity."],
-    ["The iron triangle?", "**People, process and technology** — every incident can be traced to a deficiency in one of them."],
-    ["Lesson of the tax-agency example?", "An organization **aware of a confirmed critical risk** that defers fixing it is **liable** to those defrauded."],
-  ] });
-
-  // ================= SECTION 7 =================
-  B.push({ pagebreak: true });
-  B.push({ h1: "Section 7 — Revision Notes" });
-  B.push({ h2: "7.1 One-page chapter summary" });
+  B.push({ h1: "Section 6 — Revision Notes" });
+  B.push({ h2: "6.1 One-page chapter summary" });
   B.push({ p: "**Security testing starts from security risk.** A security risk assessment tells you which assets are at risk and how much; it is the basis for planning, designing and prioritizing tests, and aligns them with business objectives — provided it reflects real threats, stakeholders and assets. It is a snapshot, so repeat it; and it misses things, so use a methodology checklist and many participants." });
   B.push({ p: "**Assets** are information, physical items and intangibles. Assess **which** matter, **how valuable** they are, **where** they live, **how** they are accessed and **how** they are protected. **Risk assessment technique** (NIST 800-30): prepare, conduct (sources → events → vulnerabilities → likelihood → impact), communicate; include customers, the public and regulators." });
   B.push({ p: "**Policies** rest on the risk assessment; **procedures** implement them step by step; **controls** (administrative, technical, physical × preventive, detective, corrective, recovery) enforce them. **Effectiveness is proven by security test results**, not by paperwork." });
   B.push({ p: "**Audits** manually examine and evaluate, with a larger scope than testing, along five pillars. **Audit finds; test proves.** Risk exposure = impact × likelihood; severity drives the urgency of mitigation." });
-  B.push({ h2: "7.2 Key definitions to memorize" });
+  B.push({ h2: "6.2 Key definitions to memorize" });
   B.push({ table: { head: ["Term", "Definition"], widths: [3.4, 10.6], rows: [
     ["Risk", "Function of adverse impact and likelihood of occurrence"],
     ["Information security risk", "Risk from loss of confidentiality, integrity or availability"],
@@ -168,7 +122,7 @@ module.exports = function () {
     ["Security procedure", "Steps to implement a policy or control, or respond to an incident"],
     ["Security audit", "Manual examination and evaluation identifying weaknesses in security processes and infrastructure"],
   ] } });
-  B.push({ h2: "7.3 High-priority concepts (study first)" });
+  B.push({ h2: "6.3 High-priority concepts (study first)" });
   B.push({ ol: [
     "**Test results prove policy effectiveness** (AS-1.2.2 — guaranteed 3 points).",
     "**External stakeholders and NIST process** (AS-1.1.3 — possible 3 points).",
@@ -176,7 +130,7 @@ module.exports = function () {
     "**Policy recognition and data classification** (AS-1.2.1 — guaranteed 1 point).",
     "**Audit purpose and pillars** (AS-1.3.1 — possible 1 point).",
   ] });
-  B.push({ h2: "7.4 Last-minute revision sheet" });
+  B.push({ h2: "6.4 Last-minute revision sheet" });
   B.push({ box: { kind: "ok", title: "If you read nothing else", body: [
     "Risk = impact × likelihood. Info-sec risk = loss of C, I or A. Assessment = snapshot → repeat; checklist + many people.",
     "Assets: which · how valuable · where · accessed how · secured how. Physical/intangible: prototypes, service delivery, reputation.",
@@ -187,7 +141,7 @@ module.exports = function () {
     "Audit = manual examination; scope larger than testing; pillars APDRR; reveals e.g. missing vendor updates.",
     "Matrix: medium likelihood × high impact = high. Business impact > technical impact.",
   ] } });
-  B.push({ h2: "7.5 Memorization checklist" });
+  B.push({ h2: "6.5 Memorization checklist" });
   B.push({ table: { head: ["✓", "I can…"], widths: [0.8, 13.2], rows: [
     ["☐", "state the role of a risk assessment in planning, design, prioritization and alignment"],
     ["☐", "list the five asset questions and give two examples for each"],
@@ -199,7 +153,7 @@ module.exports = function () {
     ["☐", "name the five audit pillars and seven typical audit findings"],
     ["☐", "compute risk exposure and read the syllabus risk matrix"],
   ] } });
-  B.push({ h2: "7.6 Exam-day quick review" });
+  B.push({ h2: "6.6 Exam-day quick review" });
   B.push({ ul: [
     "Two of the four Chapter 1 questions are **3-point K4s** — read their scenarios slowly.",
     "**Audit = reveal.** **Control = prevent.** **Test = prove.**",

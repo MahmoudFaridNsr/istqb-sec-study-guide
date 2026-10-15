@@ -200,34 +200,8 @@ module.exports = function () {
 
   // ================= SECTION 2 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 Lifecycle" });
-  B.push({ ul: [
-    "**Security is built in through design and verification**, not tested or patched in.",
-    "Four lifecycle reasons: **prescribed time · review checkpoints · test checkpoints · entry/exit criteria**.",
-    "Phase activities run **alongside** other activities: requirements (all perspectives, detailed and unambiguous), design (meets requirements), implementation (secure code, component tests and reviews), system (end-to-end, approximate target environment), acceptance (users vs criteria, operational environment), maintenance (confirmation + regression).",
-    "**System and acceptance = black-box**; component and integration exploit internals.",
-  ] });
-  B.push({ h2: "2.2 Requirements and design" });
-  B.push({ ul: [
-    "Requirements: often unclear, changing, need special skills, contain gaps, overlook quality characteristics.",
-    "Checklist: **privacy · compliance · common vulnerabilities · testability · usability · performance**.",
-    "Design: identify and avoid **security-degrading practices**; IEEE ten approaches (never assume trust, unbypassable authentication, authorize after authenticate, separate data and control, validate all data, crypto correctly, identify sensitive data, consider users, external components change attack surface, flexibility).",
-  ] });
-  B.push({ h2: "2.3 Component and integration" });
-  B.push({ ul: [
-    "Component: static first, then dynamic with valid and invalid inputs; white-box targets controls and measures coverage; **fuzzing** (white-box faster); structural finds **buffer overflows, malicious code, backdoors**; functional adequacy = requirements met **plus** unspecified stresses; **creativity**.",
-    "CERT Top 10: validate input · heed compiler warnings · architect for policies · keep it simple · default deny · least privilege · sanitize outbound data · defense in depth · effective QA · secure coding standard.",
-    "Coverage families: **requirements-based · data-driven · model-based · structural**; path coverage strongest; branch = % decision outcomes; statement = % lines.",
-    "Integration: **not a summation** — new attack vectors; some interactions mitigate; top-down/bottom-up affects timing; **scaffolding removed → new paths**.",
-  ] });
-  B.push({ h2: "2.4 System, acceptance, maintenance" });
-  B.push({ ul: [
-    "System: first end-to-end; **emergent properties**; “doing x should not allow y”; scenarios from **use, abuse, process and state models**.",
-    "Acceptance: realistic operational environment; validate goals; **security in acceptance criteria**; define **before development or purchase**; global vs specific criteria.",
-    "Maintenance: resist defeat of established controls; usability/efficiency changes risk controls; **end-to-end security regression scenarios** after any change (hardware, config, OS, DBMS, network, software).",
-  ] });
-  B.push({ h2: "2.5 Chapter 4 keyword glossary" });
+  B.push(...require("./sec_ch4_concepts")());
+  B.push({ h2: "2.7 Chapter 4 keyword glossary" });
   B.push({ table: { head: ["Keyword", "Working definition for the exam"], widths: [3.4, 10.6], rows: [
     ["**abuse case**", "A use-case-like description of how a system could be misused; a source for end-to-end security scenarios and a requirements-based coverage measure (% use/abuse cases tested)."],
     ["**fuzz testing**", "Inputting **massive amounts of random data (fuzz)** to discover vulnerabilities; white-box fuzzing instruments code to detect memory corruption and buffer overflows."],

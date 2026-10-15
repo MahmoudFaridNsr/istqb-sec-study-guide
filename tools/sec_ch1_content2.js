@@ -51,6 +51,7 @@ module.exports = function () {
     why: "**(b)** — official rationale: **you should analyze the results of a security test to see if the policies and procedures have been followed and are effective.** (a) is wrong because **the static analysis should be over the code, if anything**. (c) is wrong because **the focus shouldn’t just be on current threats and attacks, but also on configurations, etc.** (d) is wrong because **the focus is not just on the emerging threats**. Syllabus §1.2.2: tests **focus on the risk that a security policy may be in place, may be followed, but is not effective**." } });
 
   B.push({ h2: "Part B — 18 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   B.push({ q: { n: 5, tag: DER, meta: "LO: AS-1.1.1 (K2) | Syllabus §1.1.1", correct: ["a"],
     stem: "Why should security tests be prioritized using the results of a security risk assessment?",

@@ -1,4 +1,4 @@
-// CT-SEC Chapter 5 — Sections 5 to 7
+// CT-SEC Chapter 5 — Sections 5 and 6
 module.exports = function () {
   const B = [];
 
@@ -119,66 +119,11 @@ module.exports = function () {
 
   // ================= SECTION 6 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 6 — Flashcards" });
-  B.push({ lead: "Cover the back of each card and recall it from the front. All cards are drawn from Chapter 5 of the CTAL-SEC 2016 syllabus. Target: three clean passes before exam day." });
-  B.push({ flash: [
-    ["Is any single security mechanism sufficient?", "**No — none alone is sufficient in most cases**; each has advantages and disadvantages."],
-    ["Three sources of vulnerabilities (hardening)?", "**By design · by construction · by configuration.**"],
-    ["Define system hardening.", "**Step-by-step process of reducing the attack surface by applying a security policy and different layers of protection.**"],
-    ["Four levels at which hardening applies?", "**Component · product/application · system · system of systems.**"],
-    ["Five hardening removals?", "Unnecessary **software · libraries and dev tools · accounts/logins · applications and network services · peripherals and hardware ports**."],
-    ["Why a remote log server?", "An attacker can delete logs **only on the compromised machine**, not on the remote server."],
-    ["Hardening balance warning?", "Balance with **usability** — at the extreme, **protections are disabled because they block productivity**."],
-    ["Three hardening audits?", "**Default passwords changed** · **unnecessary services and ports** · **components, libraries and versions not obsolete**."],
-    ["Tools for hardening tests?", "**Vulnerability scanner** (esp. multi-site) · **static analysis / security-oriented analyzers**."],
-    ["Authentication answers which questions?", "**Login: who is the user? Password: is the user really who he pretends to be?**"],
-    ["Authorization purposes?", "Verify the authenticated user **has rights to an action**; determine **level of access** to resources."],
-    ["Five authentication implementations?", "**Weak-password detection · OTP · fingerprinting · software certificates · certificates in hard tokens.**"],
-    ["Four authentication architectures?", "**Local · server · network · Single Sign-On.**"],
-    ["Most used password (syllabus)?", "**“123456”.**"],
-    ["Four authentication/authorization tests?", "**Brute force and dictionary · SQL injection via unfiltered input · unauthorized URI/URL (../../, /admin) · exploit unpatched vulnerability → privilege escalation.**"],
-    ["Define encryption.", "Encoding **plain text into cypher text** using an **algorithm and secrets** so only authorized persons can decrypt."],
-    ["Symmetric vs asymmetric?", "Symmetric: **shared secret key**. Asymmetric: **private and public key**."],
-    ["Encryption design tests?", "**Right modes (symmetric) · key size (RSA < 2048 insecure as of 2015) · certificate validity / self-signed alerts (SSL-trip) · replay (WEP) · protocol attacks.**"],
-    ["Encryption construction tests?", "**Code review (no default random()) · fuzzing · timing attacks · power analysis.**"],
-    ["Encryption configuration tests?", "**TLS configuration assessment · TLS cipher order (downgrade/renegotiation).**"],
-    ["Fourth encryption test category?", "**Ageing** — mechanisms that **have become weak**."],
-    ["Define a firewall (Chapman).", "**A component or set of components that restricts access between a protected network and the Internet, or between other sets of networks.**"],
-    ["Host-based vs network-based firewall?", "Host: software on **one host** monitoring application I/O. Network: software monitoring traffic **between networks**."],
-    ["Three zone types?", "**Internet/public (untrusted) · DMZs (varying trust) · private/internal (most trusted).**"],
-    ["Firewall filtering criteria?", "**Addresses and protocols · protocol options (fragmentation, TTL) · size of data.**"],
-    ["What else does a WAF filter?", "**Users being the connections · data via pattern descriptions.**"],
-    ["Three firewall tests (+ WAF)?", "**Port scanning · malformed packets and network fuzzing · fragmentation attacks** (+ WAF: **encode, compress, obfuscate** payloads)."],
-    ["Define an IDS.", "Appliance or application **monitoring activity at all 7 OSI layers** to **detect security-policy violations** and raise alerts."],
-    ["Negative security model?", "**Signature-based / blacklist**: “all that is not explicitly forbidden is allowed”."],
-    ["Positive security model?", "**Behavior-based / white list**: “all that is not explicitly allowed is rejected”."],
-    ["IDS vs firewall?", "Firewall **looks outwardly to stop** intrusions; IDS **analyzes and alerts** on confirmed intrusions."],
-    ["Four IDS evasion tests?", "**Character encoding/modification · IP fragmentation, TCP segmentation · encryption, obfuscation · URL encoding.**"],
-    ["Define a false negative (IDS).", "**An alert that should have been reported but wasn’t.**"],
-    ["Most effective IDS behaviour test?", "**Use malicious traffic to add new intrusive specifications considered as authorized traffic.**"],
-    ["Anti-malware detection targets?", "**Malware, phishing and pharming.**"],
-    ["Main anti-malware strategy and weakness?", "**Signature-based; cannot detect unknown malware** (heuristics help with variations)."],
-    ["Four malware evasion techniques?", "**System library functions (FindWindow) · string obfuscation (encryption, JS in PDF, UPX) · dynamic loading · automatic updates (Skype Trojan)**; also **GPU** use."],
-    ["Anti-malware functional test file?", "**EICAR.**"],
-    ["Anti-malware deployment rule?", "**Test on a representative platform first** — false positives have quarantined OS files and shut organizations down."],
-    ["Define data obfuscation.", "**Making data and source code non-understandable for a human** (data masking / anonymization)."],
-    ["Obfuscation protects against…?", "**Copying (licence bypass)** and **reverse-engineering**."],
-    ["Six obfuscation techniques?", "**Base64 · XOR · random renaming · method overriding · tab-return-space deletion · shuffling** (+ encryption with the key caveat)."],
-    ["Obfuscation tests?", "Data: **brute force/dictionary**. Code: **Java Decompiler, .NET Reflector, unXOR**."],
-    ["Why key configuration control for obfuscation?", "Otherwise **data cannot be un-obfuscated** for use."],
-    ["Weakest link in security?", "**Humans.**"],
-    ["What should training cover?", "**Social engineering attacks and insider threats**, throughout the lifecycle, updated for new policies and threats."],
-    ["Three training-effectiveness tests (passwords)?", "**Fake tech-support call · sticky notes under keyboards · password audit tools** (risk: tester sees passwords)."],
-    ["Developer SQLi finding implies…?", "**Developer needs training; check others’ code; if widespread, process improvement.**"],
-  ] });
-
-  // ================= SECTION 7 =================
-  B.push({ pagebreak: true });
-  B.push({ h1: "Section 7 — Revision Notes" });
-  B.push({ h2: "7.1 One-page chapter summary" });
+  B.push({ h1: "Section 6 — Revision Notes" });
+  B.push({ h2: "6.1 One-page chapter summary" });
   B.push({ p: "Eight layers, none sufficient alone. **Hardening** shrinks the attack surface (remove, patch, configure, log remotely) — test with configuration audits, scanners and static analysis, and check it is not over-restrictive. **Authentication** asks who and whether truly; **authorization** asks what they may do — test with brute force, injection, URL tampering and unpatched exploits. **Encryption** turns plain into cypher text with algorithms and secrets — test design, construction, configuration and ageing." });
   B.push({ p: "**Firewalls** filter between zones of trust; **WAFs** add users and data patterns — test with port scans, malformed packets and fragmentation. **IDS** alert on policy violations via negative (signature) or positive (behaviour) models — test with evasion encodings and with malicious traffic to extend the behavioural specification. **Anti-malware** detects only what it knows — test with EICAR and a representative pilot. **Obfuscation** hides data and code — test with brute force and decompilers. **Training** addresses the weakest link — test with social engineering, desk sweeps and password audits." });
-  B.push({ h2: "7.2 Key definitions to memorize" });
+  B.push({ h2: "6.2 Key definitions to memorize" });
   B.push({ table: { head: ["Term", "Definition"], widths: [3.4, 10.6], rows: [
     ["System hardening", "Step-by-step attack-surface reduction by policy and layers of protection"],
     ["Authentication", "Verifying user identifier and token — who, and really who"],
@@ -189,7 +134,7 @@ module.exports = function () {
     ["IDS", "Monitors OSI layers to detect policy violations and alert"],
     ["Data obfuscation", "Making data/code non-understandable for humans"],
   ] } });
-  B.push({ h2: "7.3 High-priority concepts (study first)" });
+  B.push({ h2: "6.3 High-priority concepts (study first)" });
   B.push({ ol: [
     "Table 3.1 — mechanism → weakness → test (all four K3s).",
     "Authentication vs authorization; firewall vs zone vs IDS (common K2s).",
@@ -197,7 +142,7 @@ module.exports = function () {
     "Encryption test families.",
     "Humans weakest link; anti-malware only knows the known.",
   ] });
-  B.push({ h2: "7.4 Last-minute revision sheet" });
+  B.push({ h2: "6.4 Last-minute revision sheet" });
   B.push({ box: { kind: "ok", title: "If you read nothing else", body: [
     "Hardening → audit defaults/services/ports/versions; scanner; static analysis; not too restrictive.",
     "AuthN = legitimate user. AuthZ = rights. Tests: brute force, SQLi, ../../ and /admin, unpatched exploit.",
@@ -208,7 +153,7 @@ module.exports = function () {
     "Obfuscation: brute force/dictionary; decompilers; key control.",
     "Training: **humans weakest**; fake support call, sticky notes, password audit.",
   ] } });
-  B.push({ h2: "7.5 Memorization checklist" });
+  B.push({ h2: "6.5 Memorization checklist" });
   B.push({ table: { head: ["✓", "I can…"], widths: [0.8, 13.2], rows: [
     ["☐", "explain hardening and list five removals and three audits"],
     ["☐", "separate authentication from authorization and list four tests"],
@@ -219,7 +164,7 @@ module.exports = function () {
     ["☐", "list obfuscation techniques and tests"],
     ["☐", "give three training-effectiveness tests"],
   ] } });
-  B.push({ h2: "7.6 Exam-day quick review" });
+  B.push({ h2: "6.6 Exam-day quick review" });
   B.push({ ul: [
     "Expect **one question per mechanism**, alternating K2 and K3.",
     "**Find the weakness; the test exploits it.**",

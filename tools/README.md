@@ -17,13 +17,14 @@ source. Fix a typo once here, rebuild, and every affected guide is corrected con
 | --- | --- |
 | `render.js` | Shared renderer. Turns a typed block list into `docx` document elements. Owns all styling |
 | `build_common.js` | Shared assembly — cover page, contents, “How to use this guide” box, header and footer |
-| `sec_ch<N>_content1.js` | Chapter *N*, Sections 1–3 — syllabus explanation, key concepts, tables |
+| `sec_ch<N>_content1.js` | Chapter *N*, Sections 1–3 — syllabus explanation, then pulls in Section 2, then the keyword glossary and tables |
+| `sec_ch<N>_concepts.js` | Chapter *N*, Section 2 — the key-concept cards, the chapter storyline and “fuzzy points clarified” |
 | `sec_ch<N>_content2.js` | Chapter *N*, Section 4 — the question bank (Part A official, Part B derived) |
-| `sec_ch<N>_content3.js` | Chapter *N*, Sections 5–7 — exam tricks, flashcards, revision notes |
+| `sec_ch<N>_content3.js` | Chapter *N*, Sections 5–6 — exam tricks, revision notes |
 | `build_sec_ch<N>.js` | Chapter *N* entry point — chapter metadata for the cover and the how-to box |
 | `build_all.sh` | Rebuilds all nine `.docx` files, renders the PDFs and runs the checks |
 | `to_pdf.py` | Drives LibreOffice over UNO: opens each `.docx`, **updates the table of contents**, exports PDF |
-| `verify.sh` | Renders guides to PDF and reports page, question and flashcard counts, blank pages and stray markup |
+| `verify.sh` | Renders guides to PDF and reports page, question and concept-card counts, blank pages and stray markup |
 
 ## Build
 
@@ -40,10 +41,12 @@ node build_sec_ch4.js "../guides/04-security-testing-throughout-the-software-lif
 cd .. && ./tools/verify.sh guides/04-security-testing-throughout-the-software-lifecycle.docx
 ```
 
-PDF rendering needs **LibreOffice** with its Python-UNO bridge (`python3 -c "import uno"`) and
-**pdfplumber** for the checks (`pip install pdfplumber`). Plain
-`soffice --headless --convert-to pdf` also works, but leaves the table of contents empty — that is
-why `to_pdf.py` exists.
+PDF rendering needs **LibreOffice** (`soffice` on `PATH`, or `SOFFICE=/path/to/soffice`) and
+**pdfplumber** for the checks (`pip install pdfplumber`; point `PYTHON=` at another interpreter if
+pdfplumber lives in a virtualenv). `to_pdf.py` runs its export as a macro **inside** LibreOffice, so
+the system Python does not need the UNO bridge. That is what makes it work on macOS (`brew install
+--cask libreoffice`). Plain `soffice --headless --convert-to pdf` also works, but leaves the table of
+contents empty — that is why `to_pdf.py` exists.
 
 ---
 
@@ -63,7 +66,7 @@ block to document elements, so content files never touch formatting.
 | `{ table: { title, head, widths, rows } }` | Table. `widths` are relative (they are scaled to the page) |
 | `{ box: { title, body, kind } }` | Callout. `kind`: default (blue), `warn` (amber), `ok` (green). `body` may be a string or an array of strings |
 | `{ q: { n, tag, meta, stem, opts, correct, why, scenario } }` | Question with green answer box |
-| `{ flash: [[front, back], …] }` | Two-column flashcard table |
+| `{ concept: { title, plain, how, test, defend, method, why, example, exam, confuse, remember } }` | Key-concept card: a navy title bar, then one labelled row per field present (“In plain words”, “How it works”, “How to test it”, “How to defend”, “Method”, “Why it matters”, “Example”, “Exam angle”, “Don’t confuse”, “Remember”). Only `title` is required; each field may be a string or an array of strings |
 | `{ pagebreak: true }` · `{ spacer: N }` | Page break · vertical space (twips) |
 
 A `pagebreak` immediately before an `h1` is rendered as *page-break-before* on that heading, and no
@@ -104,16 +107,15 @@ It prints, per guide:
 
 ```
 file       guides/pdf/04-security-testing-throughout-the-software-lifecycle.pdf
-pages      36
+pages      38
 questions  32
-flashcards 42
+concepts   11
 blank      []
 stray mkup 0
 ```
 
 - **questions** counts *Correct answer* — it should match the README table.
-- **flashcards** counts *FRONT* — exactly the number of cards (the Section 6 lead deliberately
-  avoids the upper-case word).
+- **concepts** counts *In plain words* — the number of Section 2 concept cards.
 - **blank** must be `[]`. A page with under 250 characters of text is flagged.
 - **stray mkup** must be `0`. Anything else means a literal `*` or an unpaired `_` reached the PDF.
 
@@ -133,8 +135,8 @@ console.log(bad ? bad+" mismatches" : "all 45 official answers match");'
 
 ## Attribution
 
-`render.js`, `build_common.js`, `to_pdf.py`, the block model and all commentary, derived
-questions, tables and flashcards are original work under CC BY-NC-SA 4.0 (see
+`render.js`, `build_common.js`, `to_pdf.py`, the block model and all commentary, key-concept
+explanations, derived questions and tables are original work under CC BY-NC-SA 4.0 (see
 [`../LICENSE`](../LICENSE)). Quoted ISTQB® syllabus wording and sample-exam content embedded in the
 `content*.js` files remains © International Software Testing Qualifications Board — see
 [`../NOTICE.md`](../NOTICE.md).

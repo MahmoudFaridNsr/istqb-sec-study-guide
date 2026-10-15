@@ -231,37 +231,8 @@ module.exports = function () {
 
   // ================= SECTION 2 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 Process" });
-  B.push({ ul: [
-    "Five steps: **planning and control · analysis and design · implementation and execution · evaluating and reporting · closure** — with security goals and tasks for each.",
-    "**Not necessarily sequential**; aligned to the lifecycle; tasks are **examples, not prescriptions**.",
-    "Hierarchy: **policy, strategy (organization) → approach, tasks (project)**.",
-    "Sequential: defined early, may go stale, often tested late. Iterative: emerge per sprint, address in that iteration. COTS: no code → **no structural testing**. Open source: code visible; **patch promptly once a vulnerability is public**.",
-  ] });
-  B.push({ h2: "2.2 Planning" });
-  B.push({ ul: [
-    "Two aims: **defenses implemented as designed** and **no vulnerabilities introduced**.",
-    "Six plan elements: **scope · who · schedule · tasks and time · environment · authorizations**.",
-    "Review via **technical review**, checklist; include **IT auditors and security administrators**.",
-  ] });
-  B.push({ h2: "2.3 Design" });
-  B.push({ ul: [
-    "Start from **risk analysis, threat model or ad hoc risk categorization**.",
-    "Functional risks (SQLi, account harvesting, password cracking) vs structural (buffer overflow).",
-    "Attributes: **prioritized, traced, audience-defined, defect-profiled, automatable**.",
-    "Categories: functional security controls · functional access controls · structural access controls · secure coding · OS access · language · platform · external · internal threats.",
-    "Test cases = standalone single conditions; procedures = sequence; exploratory = record conditions and results.",
-    "Policy-based tests: **purpose and scope → testability → direct tests**.",
-  ] });
-  B.push({ h2: "2.4 Execution, evaluation, maintenance" });
-  B.push({ ul: [
-    "Environment: **isolated · complete · restorable**.",
-    "Approval: **illegal otherwise**, IDS alerts, outages, termination or prosecution; authorization form with attestations and **hold harmless**.",
-    "Incident report: tester, environment, steps, **nature, extent, impact, remediation**; **secure category**; IT auditor decides access.",
-    "Maintenance: **process designed to change easily**; keep up with tools.",
-  ] });
-  B.push({ h2: "2.5 Chapter 3 keyword glossary" });
+  B.push(...require("./sec_ch3_concepts")());
+  B.push({ h2: "2.7 Chapter 3 keyword glossary" });
   B.push({ table: { head: ["Keyword", "Working definition for the exam"], widths: [3.4, 10.6], rows: [
     ["**account harvesting**", "Identifying valid user names; once a name is known, only the password remains. Test: error messages must not reveal which item was wrong."],
     ["**password cracking**", "Recovering passwords, e.g. by tools; access controls must be **resistant to password cracking software**."],

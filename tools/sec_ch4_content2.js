@@ -81,6 +81,7 @@ module.exports = function () {
     why: "**(d)** — official rationale: **it provides the acceptance criteria based on the requirement. 7 is tempting and would be logical, but it is not specified in the requirement. … 2 is incorrect where 3 is correct. 4 is incorrect where 5 is correct.** Criteria restate the requirement exactly: the qualifier **“without a reset”** and the outcome **“locked”** (for “any other errors”) both matter." } });
 
   B.push({ h2: "Part B — 24 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   B.push({ q: { n: 9, tag: DER, meta: "LO: AS-4.1.1 (K2) | Syllabus §4.1.1", correct: ["d"],
     stem: "Which of the following is one of the reasons the syllabus gives for integrating security testing into the software lifecycle?",
@@ -261,12 +262,12 @@ module.exports = function () {
   B.push({ q: { n: 27, tag: DER, meta: "LO: AS-4.4.3 (K4) | Syllabus §4.4.3", correct: ["a"],
     stem: "A numeric PIN field accepts exactly 4 digits. Applying equivalence partitioning with the aim of a minimum set for security-relevant input validation, which set is best?",
     opts: [
-      "1234 (valid), 12a4 (non-numeric), 12345 (too long)",
+      "1234 (valid), 12a4 (non-numeric), 123 (too short), 12345 (too long)",
       "0000, 1111, 2222, 3333",
       "1234 only",
       "‘ only",
     ],
-    why: "**(a)** gives **one representative per class**: valid; invalid type; invalid length. (b) repeats one class; (c) and (d) miss classes — just as in the official Q22, a set without **a valid input** is incomplete." } });
+    why: "**(a)** gives **one representative per class**: valid; invalid type (non-numeric); invalid length **below** the range; invalid length **above** the range. “Too short” and “too long” are **two separate invalid partitions**, because the system can handle each side differently. (b) repeats one class; (c) and (d) miss classes — just as in the official Q22, a set without **a valid input** is incomplete." } });
 
   B.push({ q: { n: 28, tag: DER, meta: "LO: AS-4.4.4 (K2) | Syllabus §4.4.4", correct: ["c"],
     stem: "Which statement about security during component integration testing is correct?",

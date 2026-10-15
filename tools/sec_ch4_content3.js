@@ -1,4 +1,4 @@
-// CT-SEC Chapter 4 — Sections 5 to 7
+// CT-SEC Chapter 4 — Sections 5 and 6
 module.exports = function () {
   const B = [];
 
@@ -111,62 +111,13 @@ module.exports = function () {
 
   // ================= SECTION 6 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 6 — Flashcards" });
-  B.push({ lead: "Cover the back of each card and recall it from the front. All cards are drawn from Chapter 4 of the CTAL-SEC 2016 syllabus. Target: three clean passes before exam day." });
-  B.push({ flash: [
-    ["How is security achieved, according to §4.1?", "**Through security-oriented design and verification throughout construction** — not tested or patched into a built application."],
-    ["Four reasons to integrate security testing into the lifecycle?", "**Prescribed time for activities · checkpoints for review · checkpoints for testing · entry and exit criteria.**"],
-    ["Four questions an analyst asks when capturing needs?", "Which **levels of security access**? Any **assets needing special defenses**? How **“open”** is the application? What are the **security risks**?"],
-    ["Why review code changes?", "To **detect malicious coding by internal employees or contractors**."],
-    ["Entry criterion example?", "**No component accepted into integration until all security-related development and testing activities are complete.**"],
-    ["Requirements objectives (security)?", "Identify needs **from all perspectives inside and outside**; document them **detailed and unambiguous**, traceable."],
-    ["Requirements activities?", "Define impacted people · gather needs (**interviews, workshops**) · document for review and trace · **review for correctness, completeness, understandability, non-ambiguity**."],
-    ["Implementation activities?", "**Create secure code · component testing · component reviews.**"],
-    ["System testing activity unique to security?", "Test **in an approximation of the final target environment** — transition from development."],
-    ["Acceptance testing activities?", "**Install in operational environment · test against acceptance criteria · determine acceptance.**"],
-    ["Three maintenance types?", "**Corrective · adaptive · perfective.**"],
-    ["Which test levels are black-box?", "**System and acceptance testing.**"],
-    ["Five truths about requirements?", "Hard to write well · **change a lot** · need special skills · **contain gaps (V&V needed)** · **quality characteristics overlooked**."],
-    ["Six security requirements checklist headings?", "**Privacy · compliance · common vulnerabilities · testability · usability · performance.**"],
-    ["Two ambiguous phrases the syllabus names?", "**“Processing must be secure”** and **“access is only granted to authorized personnel”**."],
-    ["Security/performance trade-off example?", "**High levels of encryption can slow performance.**"],
-    ["Name five IEEE secure design approaches.", "**Never assume trust · unbypassable authentication · authorize after authenticate · separate data and control · validate all data · crypto correctly · identify sensitive data · consider users · external components change attack surface · flexibility.**"],
-    ["Define fuzz testing.", "Inputting **massive amounts of random data (fuzz)** to discover vulnerabilities."],
-    ["White-box fuzzing advantage?", "**Faster usable results on small blocks**; **instruments code** to detect **memory corruption and buffer overflow**."],
-    ["Three vulnerabilities found by structural testing?", "**Memory buffer overflows · malicious code by insiders · backdoor access.**"],
-    ["Define a backdoor.", "**An undocumented interface known only to the developer, intentionally implemented to bypass normal security controls.**"],
-    ["How is functional security test adequacy determined?", "**Confirming specified security requirements are satisfied**, plus responses to **unspecified stresses** — needs **creativity**."],
-    ["CERT Top 10 Secure Coding Practices?", "Validate input · heed compiler warnings · architect for security policies · keep it simple · default deny · least privilege · sanitize data to other systems · defense in depth · effective QA · secure coding standard."],
-    ["Basis for focusing checklist-based component tests?", "**Well-documented risk analysis with realistic threat modeling** — probability of attack × consequences."],
-    ["Requirements-based coverage measures?", "**% requirements · % use/abuse cases · % critical functions, scenarios or mission threads.**"],
-    ["Data-driven coverage?", "**Equivalence classes (one representative each) · pairwise · N-wise.**"],
-    ["Model-based coverage?", "Pre-post: **cause-effect, postcondition disjuncts**. Algebraic: **axioms**. Transition: **states, transitions, transition-pairs, cycles**."],
-    ["Structural coverage?", "**% packages, classes, methods, decisions, lines** (lines = **statement coverage**)."],
-    ["Define cyclomatic complexity.", "**Number of independent paths** through an element."],
-    ["Strongest control-flow criterion and why not used?", "**Path coverage**; **exhaustive path testing is generally infeasible because of loops**."],
-    ["Alternatives to path coverage?", "**Critical path coverage** and **branch coverage** (% decision outcomes)."],
-    ["Integration security — key idea?", "**Not a summation** of component vulnerabilities — **new attack vectors**; some interactions **mitigate**."],
-    ["What affects timing of revealing security concerns in integration?", "**The integration approach — top-down or bottom-up.**"],
-    ["What happens as scaffolding is removed?", "**Fuller functionality and new paths to vulnerabilities.**"],
-    ["System testing reveals what?", "**Emergent properties** not observable before integration."],
-    ["Typical form of a security requirement in system testing?", "**“In the process of doing x the system should not allow y to happen.”**"],
-    ["Sources for end-to-end security scenarios?", "**Use cases, abuse cases, process models, state transition models.**"],
-    ["When define acceptance criteria?", "**Before system development or purchase.**"],
-    ["Global vs specific acceptance criteria?", "Global: **authentication, user rights, encryption levels, audit trails** for all functions. Specific: e.g. **two-person approval for large payments**."],
-    ["Which enhancements are prone to sacrificing security?", "**Usability and efficiency enhancements.**"],
-    ["Why end-to-end security regression?", "Individual function tests are **often insufficient**; end-to-end scenarios are **more robust** and confirm **complete transactions** are secure."],
-    ["Changes that can cause security regressions?", "**Hardware, configuration files, OS, DBMS, networking, software.**"],
-  ] });
-
-  // ================= SECTION 7 =================
-  B.push({ pagebreak: true });
-  B.push({ h1: "Section 7 — Revision Notes" });
-  B.push({ h2: "7.1 One-page chapter summary" });
+  B.push({ h1: "Section 6 — Revision Notes" });
+  B.push({ h2: "6.1 One-page chapter summary" });
   B.push({ p: "**Lifecycle.** Security is built in through design and verification, not patched in. Integrating testing gives prescribed times, review and test checkpoints, and entry/exit criteria. Each phase has security objectives and activities: requirements (all perspectives, detailed and unambiguous), design (meet them), implementation (secure code, component tests and reviews), system (end-to-end in an approximate target environment), acceptance (users vs criteria in the operational environment), maintenance (confirmation and regression after any change)." });
   B.push({ p: "**Requirements and design.** Analyze requirements with the six-heading checklist — privacy, compliance, vulnerabilities, testability, usability, performance; vague words are the first deficiency. Analyze designs against the IEEE ten; trust, authorization after authentication, and data/control separation are the usual failures." });
   B.push({ p: "**Component and integration.** Static, then dynamic. White-box targets controls and measures coverage; fuzzing finds memory faults; structural testing finds overflows, malicious code and backdoors. Design component tests from CERT’s ten practices, focused by risk. Adequacy is judged by coverage — requirements-based, data-driven, model-based, structural. Integration creates new attack vectors; removing scaffolding exposes new paths." });
   B.push({ p: "**System, acceptance, maintenance.** System tests probe “doing x should not allow y” with scenarios from use, abuse, process and state models. Acceptance criteria are defined early and restate the requirement precisely. After any change, run end-to-end security regression scenarios — especially after efficiency or usability improvements." });
-  B.push({ h2: "7.2 Key definitions to memorize" });
+  B.push({ h2: "6.2 Key definitions to memorize" });
   B.push({ table: { head: ["Term", "Definition"], widths: [3.4, 10.6], rows: [
     ["Fuzz testing", "Massive amounts of random data input to discover vulnerabilities"],
     ["Backdoor", "Undocumented developer-only interface bypassing security controls"],
@@ -175,7 +126,7 @@ module.exports = function () {
     ["Branch coverage", "Percentage of decision outcomes exercised"],
     ["Statement coverage", "Percentage of executable lines exercised"],
   ] } });
-  B.push({ h2: "7.3 High-priority concepts (study first)" });
+  B.push({ h2: "6.3 High-priority concepts (study first)" });
   B.push({ ol: [
     "Coverage families and EP minimum (**AS-4.4.3**, 3 pts).",
     "Requirements checklist and IEEE ten (**AS-4.2.1 / 4.3.1**, 3 pts).",
@@ -183,7 +134,7 @@ module.exports = function () {
     "Lifecycle activities (**AS-4.1.2**, 2 pts) and reasons (**AS-4.1.1**, 1 pt).",
     "Integration not a sum; scaffolding; CERT ten (**AS-4.4.x**, 1 + 2 pts).",
   ] });
-  B.push({ h2: "7.4 Last-minute revision sheet" });
+  B.push({ h2: "6.4 Last-minute revision sheet" });
   B.push({ box: { kind: "ok", title: "If you read nothing else", body: [
     "Secure coding checked at **component testing** — as soon as code is written.",
     "Security requirements: **requirements phase, detailed and unambiguous**.",
@@ -196,7 +147,7 @@ module.exports = function () {
     "Acceptance criteria → **exact restatement**; “without a reset”, “locked”; nothing logical-but-unspecified.",
     "Efficiency changes → **end-to-end security regression**.",
   ] } });
-  B.push({ h2: "7.5 Memorization checklist" });
+  B.push({ h2: "6.5 Memorization checklist" });
   B.push({ table: { head: ["✓", "I can…"], widths: [0.8, 13.2], rows: [
     ["☐", "give the four lifecycle reasons with an example each"],
     ["☐", "state objectives and activities for all six phases"],
@@ -209,7 +160,7 @@ module.exports = function () {
     ["☐", "filter candidate acceptance criteria"],
     ["☐", "design an end-to-end security regression set"],
   ] } });
-  B.push({ h2: "7.6 Exam-day quick review" });
+  B.push({ h2: "6.6 Exam-day quick review" });
   B.push({ ul: [
     "Largest chapter: **16 points**. Expect **two scenario questions on one requirement**.",
     "**Minimum** means minimum. **Acceptance criteria** mean the requirement, exactly.",

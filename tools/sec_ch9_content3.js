@@ -1,4 +1,4 @@
-// CT-SEC Chapter 9 — Sections 5 to 7
+// CT-SEC Chapter 9 — Sections 5 and 6
 module.exports = function () {
   const B = [];
 
@@ -10,7 +10,7 @@ module.exports = function () {
     ["9.1.2", "K2", "1", "#45", "Advantage in contracts → **starting place for negotiation**"],
     ["**Chapter 9 total**", "—", "**2**", "**#44–#45**", "**The smallest chapter**"],
   ] } });
-  B.push({ box: { title: "The arithmetic", body: "**2 points for 40 minutes.** Do it last, in one sitting; revisit only Section 7 before the exam." } });
+  B.push({ box: { title: "The arithmetic", body: "**2 points for 40 minutes.** Do it last, in one sitting; revisit only Section 6 before the exam." } });
 
   B.push({ h2: "5.2 Common distractors observed" });
   B.push({ ul: [
@@ -70,47 +70,25 @@ module.exports = function () {
   ] } });
 
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 6 — Flashcards" });
-  B.push({ lead: "Cover the back of each card and recall it from the front. All cards are drawn from Chapter 9 of the CTAL-SEC 2016 syllabus. Target: three clean passes before exam day." });
-  B.push({ flash: [
-    ["Define a consensus-based standard.", "**The considered opinion of a knowledgeable body of experts**, made available for **voluntary** use in **contractual agreements between suppliers and customers**."],
-    ["Lesser “standards” come from…?", "**Informal or self-identified groups** — may be **vendor-specific**."],
-    ["Regulated industries named?", "**Medical, financial, transportation, energy.**"],
-    ["Four benefits of security testing standards?", "**Framework (no blank page) · effective defenses and how to test common attacks · tailorable · demonstrate due diligence.**"],
-    ["Standards in regulated activities?", "Obligation to comply; failure can **delay or prevent approval** and bring **financial or criminal sanctions**."],
-    ["Standards in contracts?", "**A reasonable and convenient basis for negotiation — a starting point.**"],
-    ["If a contract was won by claiming compliance?", "**Follow the standards strictly and document any deviations.**"],
-    ["How to select a standard?", "Research the most appropriate for **systems, applications, sensitive assets, risk level, compliance requirements**; **tailor**."],
-    ["“Shall”?", "**Mandatory** — required to conform (normative)."],
-    ["“Should” and “may”?", "**Optional** — not required to claim conformance (informative)."],
-    ["Typical misuse of a standard?", "**Requiring an optional item or treating an obligatory item as optional.**"],
-    ["Deviating from a standard?", "**Document the justification and get agreement from all parties.**"],
-    ["Most immediate source of actionable trend information?", "**Electronic alerts.**"],
-    ["Timely and targeted updates come from…?", "**A focused professional society or community of practice.**"],
-    ["Where are industry-specific issues communicated?", "**Specialized publications and news services, technical conferences and professional events.**"],
-    ["Best defense against evolving threats (§9.3.2)?", "**Awareness of the industry, close tracking of security trends, acquisition of the most appropriate tools.**"],
-  ] });
-
-  B.push({ pagebreak: true });
-  B.push({ h1: "Section 7 — Revision Notes" });
-  B.push({ h2: "7.1 One-page chapter summary" });
+  B.push({ h1: "Section 6 — Revision Notes" });
+  B.push({ h2: "6.1 One-page chapter summary" });
   B.push({ p: "Consensus-based standards capture expert opinion for voluntary use; regulators in medical, financial, transportation and energy sectors may make them mandatory. Standards give a framework (no blank page), describe defenses and tests for common attacks, can be tailored, and demonstrate due diligence. Under regulation, non-compliance risks approval and sanctions; in contracts, standards are a starting point for negotiation — unless compliance was claimed to win the contract, in which case follow strictly and document deviations. Shall is mandatory; should and may are optional; justify, document and agree any deviation. Track trends through news services, events, professional societies, electronic alerts (fastest) and specialized sources." });
-  B.push({ h2: "7.2 Key definitions to memorize" });
+  B.push({ h2: "6.2 Key definitions to memorize" });
   B.push({ table: { head: ["Term", "Definition"], widths: [3.4, 10.6], rows: [
     ["Consensus-based standard", "Considered opinion of experts for voluntary contractual use"],
     ["Normative clause", "Mandatory — shall"],
     ["Informative clause", "Optional — should / may"],
   ] } });
-  B.push({ h2: "7.3 High-priority concepts (study first)" });
+  B.push({ h2: "6.3 High-priority concepts (study first)" });
   B.push({ ol: ["Four benefits.", "Regulatory vs contractual.", "Shall vs should/may.", "Trend sources."] });
-  B.push({ h2: "7.4 Last-minute revision sheet" });
+  B.push({ h2: "6.4 Last-minute revision sheet" });
   B.push({ box: { kind: "ok", title: "If you read nothing else", body: [
     "Benefits: **no blank page** · defenses and tests · tailorable · due diligence.",
     "Contract: **starting point for negotiation**. Regulated: **comply or face delay/sanctions**. Claimed: **strict + document deviations**.",
     "**Shall = mandatory; should/may = optional.**",
     "Trends: **electronic alerts (fastest)**, professional societies (targeted), specialized sources (industry-specific).",
   ] } });
-  B.push({ h2: "7.5 Memorization checklist" });
+  B.push({ h2: "6.5 Memorization checklist" });
   B.push({ table: { head: ["✓", "I can…"], widths: [0.8, 13.2], rows: [
     ["☐", "define a consensus-based standard and name the regulated industries"],
     ["☐", "list the four benefits of standards"],
@@ -118,7 +96,7 @@ module.exports = function () {
     ["☐", "classify shall / should / may and describe the typical misuse"],
     ["☐", "name five sources of trend information"],
   ] } });
-  B.push({ h2: "7.6 Exam-day quick review" });
+  B.push({ h2: "6.6 Exam-day quick review" });
   B.push({ ul: ["**Starting point, not a cage** — unless a regulator or a claim makes it one.", "**Shall must; should/may might.**"] });
 
   return B;

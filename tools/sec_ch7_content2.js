@@ -41,6 +41,7 @@ module.exports = function () {
     why: "**(c)** — official rationale: **the risk impact should be described in the summary and detailed later in the report by discussing specific vulnerabilities.** (a) **the details should not be in the summary**. (b) **the information should not be recorded only at the end of the report**. (d) **this is an important part of the report**." } });
 
   B.push({ h2: "Part B — 13 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   B.push({ q: { n: 4, tag: DER, meta: "LO: AS-7.1.1 (K2) | Syllabus §7.1", correct: ["a"],
     stem: "Midway through a project, a widely publicized attack on a competitor makes stakeholders demand stronger authentication. What does the syllabus recommend?",

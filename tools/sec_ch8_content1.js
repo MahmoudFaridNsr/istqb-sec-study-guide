@@ -97,22 +97,8 @@ module.exports = function () {
   ] } });
 
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 Tools" });
-  B.push({ ul: [
-    "Hacking drove tool development; **John the Ripper** went from cracker to legitimate weak-password detector; **Nessus, Metasploit** frameworks.",
-    "Many tools, **non-standardized tests**, different data and interpretations → **selection is a challenge**.",
-    "Tools **automate defense evaluation** and **detect known vulnerability types**.",
-    "Static: **early**, most languages. Dynamic security tools **probe the system**, sometimes doing a **static scan** of e.g. a database.",
-    "Keep your **own updated tool list**; sources: WASC, OWASP, Kali/BackTrack, sectools.org.",
-  ] });
-  B.push({ h2: "2.2 Selection" });
-  B.push({ ul: [
-    "Nine test-basis items → interfaces, protocols and standards, web coding guidelines, configurations → **tool requirements**; development vs operations activity.",
-    "Open source: free but needs **internal technical capacity**; regulation may forbid; thin manuals; six ROI aspects; licence count drivers.",
-    "Vendor: licence types and scalability, support hours, community, **update frequency**, manuals, contracts.",
-  ] });
-  B.push({ h2: "2.3 Chapter 8 keyword glossary" });
+  B.push(...require("./sec_ch8_concepts")());
+  B.push({ h2: "2.4 Chapter 8 keyword glossary" });
   B.push({ p: "The syllabus lists **no keywords** for Chapter 8. Useful working terms: **static analysis tool** (analyzes artifacts not in operational mode; early), **dynamic analysis tool** (probes a running system), **vulnerability scanner** (Chapter 5), **ROI** (return on investment in a tool), **floating licence** (shared pool of concurrent licences), **token licence** (usage-based licence units)." });
 
   B.push({ pagebreak: true });

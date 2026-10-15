@@ -9,9 +9,9 @@ require("./build_common")({
   keywords: "consensus-based standard",
   official: "**#44 – #45** (1 + 1 points)",
   howto: [
-    "**Section 1** explains the four learning objectives and the two un-numbered sections (9.1.3, 9.3.2). **Section 2** compresses them. **Section 3** holds two short filter tables. **Section 4** is the question bank, **Section 5** exam tactics, **Section 6** spaced repetition, **Section 7** the night before.",
+    "**Section 1** explains the four learning objectives and the two un-numbered sections (9.1.3, 9.3.2). **Section 2** explains every key concept from the ground up — plain words, how it works, a worked example, the exam angle, and what it is easily confused with — and ends with the chapter’s **fuzzy points clarified**. If the syllabus wording in Section 1 feels dense, read the matching Section 2 card first. **Section 3** holds two short filter tables. **Section 4** is the question bank, **Section 5** exam tactics, **Section 6** is the revision sheet for the night before.",
     "**What makes Chapter 9 unusual:** it is the **smallest chapter** — two K2 points. Learn it in **one sitting** and do not over-invest.",
     "**The rule that decides it:** standards are **a framework and a starting point** — for testing (no blank page, tailorable, due diligence) and for **contract negotiation** — and become **binding** under a regulator or when compliance was claimed. **“Shall” is mandatory; “should” and “may” are optional.**",
-    "**Suggested schedule:** one session for everything; Section 6 a few times; Section 7 the night before.",
+    "**Suggested schedule:** one session for everything; Section 6 the night before.",
   ],
 }, process.argv[2]);

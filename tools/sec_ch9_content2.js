@@ -31,6 +31,7 @@ module.exports = function () {
     why: "**(b)** — official rationale: **by defining the security standards, each party can then determine what is required and further specify those requirements.** (a) **it’s too late then!** (c) **the security agreements are likely to be kept private**. (d) **contracts don’t usually change in this way**." } });
 
   B.push({ h2: "Part B — 12 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   B.push({ q: { n: 3, tag: DER, meta: "LO: AS-9.1.1 (K2) | Syllabus §9.1.1", correct: ["c"],
     stem: "How can following recognized security testing standards help an organization after a breach?",

@@ -75,22 +75,8 @@ module.exports = function () {
   ] });
 
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 Standards" });
-  B.push({ ul: [
-    "Consensus-based standard = **considered opinion of a knowledgeable body of experts**, for **voluntary** use in contracts. Lesser “standards” may be **vendor-specific**.",
-    "Regulated industries: **medical, financial, transportation, energy** — agencies may **require** compliance.",
-    "Benefits: **framework (no blank page) · effective defenses and tests · tailorable · due diligence**.",
-    "Regulatory: comply or risk **delayed approval, sanctions**. Contractual: **starting point for negotiation**; if compliance was claimed, **follow strictly and document deviations**.",
-    "Select the appropriate standard for systems, assets, risk and compliance; tailor.",
-    "**Shall = mandatory; should/may = optional**; document and agree justified deviations.",
-  ] });
-  B.push({ h2: "2.2 Trends" });
-  B.push({ ul: [
-    "News services, events, **professional societies (timely, targeted)**, **electronic alerts (most immediate)**, periodic publicity (widespread), specialized sources (industry-specific).",
-    "New technology = window of misuse; growing range of motivated, resourced attackers; be ready for the next threat.",
-  ] });
-  B.push({ h2: "2.3 Chapter 9 keyword glossary" });
+  B.push(...require("./sec_ch9_concepts")());
+  B.push({ h2: "2.4 Chapter 9 keyword glossary" });
   B.push({ table: { head: ["Keyword", "Working definition for the exam"], widths: [3.4, 10.6], rows: [
     ["**consensus-based standard**", "A standard representing the considered opinion of a knowledgeable body of experts, made available for voluntary use (in whole or in part) in contractual agreements between suppliers and customers."],
     ["**normative clause**", "A mandatory requirement — signalled by **shall**."],

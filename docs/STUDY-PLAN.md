@@ -25,7 +25,7 @@ scenario practice, not just reading.
 | 4 | Chapter 2 Sections 4–5. Rebuild the **policy hierarchy** and the **scope rule** from blank paper | 1.5 h |
 | 5 | **Chapter 9** guide, all sections (one sitting) | 1 h |
 | 6 | **Chapter 1** guide, Sections 1–3 | 1.5 h |
-| 7 | Chapter 1 Sections 4–5. Flashcards Ch 1, 2, 8, 9 | 1 h |
+| 7 | Chapter 1 Sections 4–5. Re-read the “Fuzzy points clarified” box in Ch 1, 2, 8, 9 | 1 h |
 
 **End of week 1:** Chapters 1, 2, 8 and 9 — **26 points** — covered.
 
@@ -37,7 +37,7 @@ scenario practice, not just reading.
 | 9 | Chapter 3 Section 1, §3.3 (design categories, secure coding list, DoS family, policy-based tests) | 2 h |
 | 10 | Chapter 3 Section 1, §3.4–3.6 (environment, approvals, **incident handling**) | 1.5 h |
 | 11 | Chapter 3 Sections 3–4. Drill **table 3.5 (first response to a vulnerability)** | 2 h |
-| 12 | Chapter 3 Section 5. Flashcards Ch 1, 2, 3 | 1.5 h |
+| 12 | Chapter 3 Section 5. Re-read the “Fuzzy points clarified” box in Ch 1, 2, 3 | 1.5 h |
 | 13–14 | Rest, or catch-up | — |
 
 ### Week 3 — The process core, part two: Chapter 4
@@ -62,7 +62,7 @@ scenario practice, not just reading.
 | 25 | Chapter 5 §5.5–5.8 and Section 4 | 2 h |
 | 26 | **Re-take the official Sample Exam.** Score in points against your baseline. Every miss goes on a one-page error list | 2 h |
 | 27 | Work only the error list. Re-read the relevant Section 1 passages | 1.5 h |
-| 28 | **Section 7 of all nine guides**, in order 4 → 3 → 2 → 6 → 5 → 1 → 7 → 8 → 9. Nothing new | 2 h |
+| 28 | **Section 6 (revision notes) of all nine guides**, in order 4 → 3 → 2 → 6 → 5 → 1 → 7 → 8 → 9. Nothing new | 2 h |
 
 ---
 
@@ -72,7 +72,7 @@ Compressed, and ordered by return. Use this if the exam is booked and close.
 
 | Day | Focus | Time |
 | --- | --- | --- |
-| 1 | **Sample Exam cold** (2 h). **Chapter 8** all sections (1.5 h). Flashcards Ch 8 | 4 h |
+| 1 | **Sample Exam cold** (2 h). **Chapter 8** all sections (1.5 h) | 4 h |
 | 2 | **Chapter 2** all sections | 4 h |
 | 3 | **Chapter 3** Section 1 and table 3.5 | 4 h |
 | 4 | Chapter 3 Sections 4–5. **Chapter 9** all sections (1 h) | 4 h |
@@ -81,7 +81,7 @@ Compressed, and ordered by return. Use this if the exam is booked and close.
 | 7 | **Chapter 1** all sections (2 h). **Chapter 7** all sections (1.5 h) | 4 h |
 | 8 | **Chapter 6** all sections (2 h). **Chapter 5** table 3.1 and Section 4 Part A only (2 h) | 4 h |
 | 9 | **Re-take the Sample Exam.** Build the error list | 4 h |
-| 10 | Error list only (2 h). **Section 7 of all nine guides** (2 h). Sleep | 4 h |
+| 10 | Error list only (2 h). **Section 6 of all nine guides** (2 h). Sleep | 4 h |
 
 **If you have less than ten days**, cut in this order: Chapter 5 beyond table 3.1; Chapter 1’s
 eighteen-policy table (keep table 3.2); Chapter 3’s secure coding list detail; Part B question
@@ -117,8 +117,9 @@ A chapter is covered when you can, without notes:
 
 ## Daily habits that matter more than the schedule
 
-1. **Flashcards every day**, even on rest days. Ten minutes. Three clean passes per chapter before
-   exam day.
+1. **Explain one Section 2 concept card aloud every day**, even on rest days. Ten minutes. Cover
+   the card, explain it in your own words with an example, then check. If you cannot give the
+   example, you do not understand it yet.
 2. **One scenario question on paper per session.** Write the reasoning, not just the letter.
 3. **Rebuild one table from blank paper each session.** Recognition is not recall.
 4. **Keep a one-page error list.** Every miss in one line: the objective, the trap, the correct

@@ -207,19 +207,8 @@ module.exports = function () {
 
   // ================= SECTION 2 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 One line per mechanism" });
-  B.push({ table: { head: ["Mechanism", "Concept (K2)", "Test (K3)"], widths: [2.8, 5.6, 5.6], rows: [
-    ["**Hardening**", "Step-by-step attack-surface reduction by policy and layers; remove, patch, configure, remote logs; balance usability", "Audit defaults, services, ports, versions; vulnerability scanner; static analysis; check over-restriction"],
-    ["**AuthN / AuthZ**", "AuthN = who and is it really you (ID + token); AuthZ = rights and access level; unauthenticated = no/restricted rights", "Brute force, dictionary, SQL injection to bypass login, ../../ and /admin, exploit unpatched flaws"],
-    ["**Encryption**", "Plain → cypher text with algorithm + secret; at rest and in transit; symmetric (shared key) vs asymmetric (public/private); hashing and salting", "Modes, key size (RSA ≥ 2048), certificates/self-signed, replay; code review (random()), fuzzing, timing, power; TLS config and cipher order; ageing"],
-    ["**Firewalls / zones**", "Restricts access between networks; host- or network-based; zones of trust (public, DMZ, internal); filters addresses, options, size; WAF filters users and data patterns", "Port scanning, malformed packets and fuzzing, fragmentation; WAF: encode, compress, obfuscate"],
-    ["**IDS**", "Monitors OSI layers for policy violations; negative (signature, blacklist) vs positive (behaviour, white list); IDS alerts, firewall blocks", "Evasion (encoding, fragmentation, encryption, URL encoding); false negatives; malicious traffic to add intrusive specifications; PP-IDS, WAFEC"],
-    ["**Anti-malware**", "Signature-based + heuristic; malware, phishing, pharming; misses the unknown", "EICAR; test on a representative platform first; know evasion techniques (FindWindow, UPX, dynamic loading, GPU)"],
-    ["**Obfuscation**", "Make data/code non-understandable; masking, anonymization; base64, XOR, renaming, shuffling; encryption with key caveat", "Key/data configuration control; brute force/dictionary; decompilers; unXOR; code can’t fully protect itself"],
-    ["**Training**", "Humans weakest link; continuous, lifecycle-wide; social engineering and insider threats", "Fake support call; sticky notes; password audit; SQLi by a tester; physical access attempt"],
-  ] } });
-  B.push({ h2: "2.2 Chapter 5 keyword glossary" });
+  B.push(...require("./sec_ch5_concepts")());
+  B.push({ h2: "2.4 Chapter 5 keyword glossary" });
   B.push({ table: { head: ["Keyword", "Working definition for the exam"], widths: [3.4, 10.6], rows: [
     ["**anti-malware**", "Software to analyze, detect and remove malicious code; mainly signature-based plus heuristics."],
     ["**authentication**", "Verifying a user identifier and token — who the user is and whether they are who they claim."],

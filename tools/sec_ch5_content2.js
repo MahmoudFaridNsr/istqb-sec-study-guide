@@ -91,6 +91,7 @@ module.exports = function () {
     why: "**(c)** — official rationale: **it’s the people and their behavior that is the weakest link.** Syllabus §5.8.1: **humans are often the weakest link in the overall security picture.**" } });
 
   B.push({ h2: "Part B — 24 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   // 5.1
   B.push({ q: { n: 9, tag: DER, meta: "LO: AS-5.1.1 (K2) | Syllabus §5.1.1", correct: ["b"],

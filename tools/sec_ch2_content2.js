@@ -71,6 +71,7 @@ module.exports = function () {
     why: "**(c)** — official rationale: **the business customers will be most concerned with protection from fraudulent access as it is their data that is vulnerable**. You would hope (a), (b) and (d) are also involved, **but this is not usually their primary benefit**. Syllabus §2.6.3: **business customers may see protection from fraud**." } });
 
   B.push({ h2: "Part B — 20 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   B.push({ q: { n: 7, tag: DER, meta: "LO: AS-2.2.1 (K2) | Syllabus §2.2", correct: ["b"],
     stem: "Which statement about the purpose of security testing is correct?",

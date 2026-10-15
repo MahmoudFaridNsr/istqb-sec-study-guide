@@ -1,4 +1,4 @@
-// CT-SEC Chapter 8 — Sections 5 to 7
+// CT-SEC Chapter 8 — Sections 5 and 6
 module.exports = function () {
   const B = [];
 
@@ -77,43 +77,18 @@ module.exports = function () {
   ] } });
 
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 6 — Flashcards" });
-  B.push({ lead: "Cover the back of each card and recall it from the front. All cards are drawn from Chapter 8 of the CTAL-SEC 2016 syllabus. Target: three clean passes before exam day." });
-  B.push({ flash: [
-    ["What drove the development of security testing tools?", "**Exploits devised by the hacking community.**"],
-    ["John the Ripper — then and now?", "Early **open source password cracker** → now **detects weak Unix passwords** legitimately."],
-    ["Two early open source frameworks named?", "**Nessus and Metasploit.**"],
-    ["Why is tool selection a challenge?", "**Non-standardized tests** — different data, implementations, interpretations — and defenses/vulnerabilities **implemented differently**."],
-    ["Two things security tools do?", "**Automate evaluation of defenses · detect known types of vulnerabilities.**"],
-    ["Static analysis advantage?", "**Very early in the lifecycle**; most languages; report on security aspects."],
-    ["How do dynamic security tools differ?", "They **probe the system rather than (just) the application under test**."],
-    ["Can a dynamic tool scan statically?", "**Yes — e.g. a static scan of a database.**"],
-    ["Sources of tool lists?", "**WASC · OWASP · BackTrack/Kali · sectools.org** — and your **own maintained list**."],
-    ["Nine test-basis items for security testing?", "Security policy · test policy · threat/risk analysis · requirements · architecture/design · security (test) strategy · system under test · known threats/exploits/vulnerabilities · **user profiles**."],
-    ["Four overview items from requirements/design?", "**Interfaces (incl. GUI) · protocols and standards · web coding guidelines · component configurations (hardened).**"],
-    ["Development or operations?", "Determine whether security testing is a **development** or **maintenance/operations** activity — it shapes tool requirements."],
-    ["Why might open source be disallowed?", "**Regulatory compliance** may require commercial or certified tools."],
-    ["Hidden cost of open source?", "**Technical capacity for support and configuration** — or paying the developer for it."],
-    ["Six open source ROI aspects?", "**Limited scope · learning time · forum time · update/upgrade time · future direction · community responsiveness.**"],
-    ["GPL tool maintenance consideration?", "**Your team’s capability to support and customize** — there is **no vendor**."],
-    ["Licence count drivers?", "**Functional areas · frequency and time of use · number of security testers.**"],
-    ["Seven vendor attributes?", "**Licence types · licence scalability · helpdesk hours · forum/community · update frequency · manuals · support and maintenance contracts.**"],
-    ["Four licence types?", "**Fixed · desk · floating · token.**"],
-  ] });
-
-  B.push({ pagebreak: true });
-  B.push({ h1: "Section 7 — Revision Notes" });
-  B.push({ h2: "7.1 One-page chapter summary" });
+  B.push({ h1: "Section 6 — Revision Notes" });
+  B.push({ h2: "6.1 One-page chapter summary" });
   B.push({ p: "Security tools grew out of hacker tools (John the Ripper; Nessus and Metasploit frameworks). There are many, mostly open source, running non-standardized tests — so choosing is hard. Tools automate defense evaluation and detect known vulnerability types. Static tools work early; dynamic security tools probe the system and may even scan statically. Tool needs come from nine test-basis items and from the interfaces, protocols, coding guidelines and configurations they reveal, plus whether testing is a development or operations activity. Open source is free but needs your own technical capacity and may be ruled out by regulation; commercial vendors must be judged on licences, support, community, manuals, contracts — and above all **update frequency**." });
-  B.push({ h2: "7.2 Key definitions to memorize" });
+  B.push({ h2: "6.2 Key definitions to memorize" });
   B.push({ table: { head: ["Term", "Definition"], widths: [3.4, 10.6], rows: [
     ["Static analysis (security)", "Analysis while the object is not operational; early; most languages"],
     ["Dynamic security tool", "Probes the system rather than just the application"],
     ["ROI aspects (open source)", "Scope, learning, forums, upgrades, future direction, community"],
   ] } });
-  B.push({ h2: "7.3 High-priority concepts (study first)" });
+  B.push({ h2: "6.3 High-priority concepts (study first)" });
   B.push({ ol: ["Needs → capability; firewall malformed/fuzz (3 pts).", "Dynamic security tools probe the system (1 pt).", "Open source = no vendor; vendor update frequency (1 pt)."] });
-  B.push({ h2: "7.4 Last-minute revision sheet" });
+  B.push({ h2: "6.4 Last-minute revision sheet" });
   B.push({ box: { kind: "ok", title: "If you read nothing else", body: [
     "Dynamic security tools **probe the system**; static tools work **early**.",
     "Firewall + DoS worry → **malformed packets / fuzzed data**.",
@@ -121,14 +96,14 @@ module.exports = function () {
     "Vendor → **update frequency** (plus licences, support, community, manuals, contracts).",
     "Needs: interfaces, protocols/standards, coding guidelines, configurations; dev vs ops.",
   ] } });
-  B.push({ h2: "7.5 Memorization checklist" });
+  B.push({ h2: "6.5 Memorization checklist" });
   B.push({ table: { head: ["✓", "I can…"], widths: [0.8, 13.2], rows: [
     ["☐", "explain static vs dynamic security tools including the static-scan twist"],
     ["☐", "list the nine test-basis items and four overview items"],
     ["☐", "list open source issues and the six ROI aspects"],
     ["☐", "list the seven vendor attributes and four licence types"],
   ] } });
-  B.push({ h2: "7.6 Exam-day quick review" });
+  B.push({ h2: "6.6 Exam-day quick review" });
   B.push({ ul: ["**Probes the system** decides the static/dynamic question.", "**Need → capability** decides the K4; **is there a vendor?** decides the open-source/vendor question."] });
 
   return B;

@@ -1,0 +1,19 @@
+# Build tooling
+node_modules/
+tools/node_modules/
+tools/package-lock.json
+__pycache__/
+*.pyc
+.DS_Store
+
+# Official ISTQB® documents must never be committed (see docs/COPYRIGHT-RISK.md).
+# Download them yourself — docs/RESOURCES.md has the links.
+*ISTQB*.pdf
+*istqb*.pdf
+*Syllabus*.pdf
+*syllabus*.pdf
+*Sample*Exam*.pdf
+*sample*exam*.pdf
+*Exam*Structure*.pdf
+# …but the guides' own renders are always kept.
+!guides/pdf/*.pdf

@@ -4,8 +4,10 @@ Chapter-by-chapter study guides for the **ISTQB® Certified Tester Advanced Leve
 (CT-SEC, formerly CTAL-SEC), Syllabus 2016**, plus the prerequisites, background material and study
 plans that make the syllabus click instead of just being memorised.
 
-Nine guides, **249 pages**, **205 practice questions** and **294 flashcards**. Every learning
-objective explained, every official sample-exam question mapped to the objective it tests.
+Nine guides, **257 pages**, **205 practice questions** and **74 key-concept explanations**. Every
+learning objective explained, every key concept taught from the ground up (plain words, how it
+works, a worked example, the exam angle, and what it is easily confused with), and every official
+sample-exam question mapped to the objective it tests.
 
 > **Unofficial.** Not affiliated with, endorsed by, accredited by or sponsored by the ISTQB®.
 > ISTQB® is a registered trademark of the International Software Testing Qualifications Board.
@@ -35,22 +37,23 @@ objective explained, every official sample-exam question mapped to the objective
 
 ## The guides
 
-Each guide is a self-contained `.docx` with a cover page, live table of contents and seven sections:
-**1** syllabus explanation per objective · **2** key concepts · **3** tables and summaries ·
-**4** question bank with answers · **5** exam tricks · **6** flashcards · **7** revision notes.
+Each guide is a self-contained `.docx` with a cover page, live table of contents and six sections:
+**1** syllabus explanation per objective · **2** key concepts explained, ending with the chapter’s
+**fuzzy points clarified** · **3** tables and summaries · **4** question bank with answers ·
+**5** exam tricks · **6** revision notes.
 
-| # | Chapter | Read | Edit | Exam Qs | Points | Teaching | Pts/hr | Pages | Practice Qs | Cards |
+| # | Chapter | Read | Edit | Exam Qs | Points | Teaching | Pts/hr | Pages | Practice Qs | Concepts |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | The Basis of Security Testing | [PDF](guides/pdf/01-the-basis-of-security-testing.pdf) | [docx](guides/01-the-basis-of-security-testing.docx) | 4 | 8 | 105 min | 4.6 | 34 | 22 | 39 |
-| 2 | Security Testing Purposes, Goals and Strategies | [PDF](guides/pdf/02-security-testing-purposes-goals-and-strategies.pdf) | [docx](guides/02-security-testing-purposes-goals-and-strategies.docx) | 6 | 11 | 130 min | **5.1** | 32 | 26 | 35 |
-| 3 | Security Testing Processes | [PDF](guides/pdf/03-security-testing-processes.pdf) | [docx](guides/03-security-testing-processes.docx) | 6 | 12 | 140 min | **5.1** | 33 | 26 | 42 |
-| 4 | Security Testing Throughout the Software Lifecycle | [PDF](guides/pdf/04-security-testing-throughout-the-software-lifecycle.pdf) | [docx](guides/04-security-testing-throughout-the-software-lifecycle.docx) | **8** | **16** | 225 min | 4.3 | 36 | 32 | 42 |
-| 5 | Testing Security Mechanisms | [PDF](guides/pdf/05-testing-security-mechanisms.pdf) | [docx](guides/05-testing-security-mechanisms.docx) | 8 | 12 | **240 min** | 3.0 | 34 | 32 | 48 |
-| 6 | Human Factors in Security Testing | [PDF](guides/pdf/06-human-factors-in-security-testing.pdf) | [docx](guides/06-human-factors-in-security-testing.docx) | 5 | 9 | 105 min | **5.1** | 26 | 22 | 35 |
-| 7 | Security Test Evaluation and Reporting | [PDF](guides/pdf/07-security-test-evaluation-and-reporting.pdf) | [docx](guides/07-security-test-evaluation-and-reporting.docx) | 3 | 5 | 70 min | 4.3 | 18 | 16 | 18 |
-| 8 | Security Testing Tools | [PDF](guides/pdf/08-security-testing-tools.pdf) | [docx](guides/08-security-testing-tools.docx) | 3 | 5 | 55 min | **5.5** | 19 | 15 | 19 |
-| 9 | Standards and Industry Trends | [PDF](guides/pdf/09-standards-and-industry-trends.pdf) | [docx](guides/09-standards-and-industry-trends.docx) | 2 | 2 | 40 min | 3.0 | 17 | 14 | 16 |
-| | **Total** | | | **45** | **80** | 1,110 min | | **249** | **205** | **294** |
+| 1 | The Basis of Security Testing | [PDF](guides/pdf/01-the-basis-of-security-testing.pdf) | [docx](guides/01-the-basis-of-security-testing.docx) | 4 | 8 | 105 min | 4.6 | 35 | 22 | 13 |
+| 2 | Security Testing Purposes, Goals and Strategies | [PDF](guides/pdf/02-security-testing-purposes-goals-and-strategies.pdf) | [docx](guides/02-security-testing-purposes-goals-and-strategies.docx) | 6 | 11 | 130 min | **5.1** | 34 | 26 | 11 |
+| 3 | Security Testing Processes | [PDF](guides/pdf/03-security-testing-processes.pdf) | [docx](guides/03-security-testing-processes.docx) | 6 | 12 | 140 min | **5.1** | 37 | 26 | 13 |
+| 4 | Security Testing Throughout the Software Lifecycle | [PDF](guides/pdf/04-security-testing-throughout-the-software-lifecycle.pdf) | [docx](guides/04-security-testing-throughout-the-software-lifecycle.docx) | **8** | **16** | 225 min | 4.3 | 38 | 32 | 11 |
+| 5 | Testing Security Mechanisms | [PDF](guides/pdf/05-testing-security-mechanisms.pdf) | [docx](guides/05-testing-security-mechanisms.docx) | 8 | 12 | **240 min** | 3.0 | 33 | 32 | 8 |
+| 6 | Human Factors in Security Testing | [PDF](guides/pdf/06-human-factors-in-security-testing.pdf) | [docx](guides/06-human-factors-in-security-testing.docx) | 5 | 9 | 105 min | **5.1** | 26 | 22 | 6 |
+| 7 | Security Test Evaluation and Reporting | [PDF](guides/pdf/07-security-test-evaluation-and-reporting.pdf) | [docx](guides/07-security-test-evaluation-and-reporting.docx) | 3 | 5 | 70 min | 4.3 | 18 | 16 | 4 |
+| 8 | Security Testing Tools | [PDF](guides/pdf/08-security-testing-tools.pdf) | [docx](guides/08-security-testing-tools.docx) | 3 | 5 | 55 min | **5.5** | 19 | 15 | 4 |
+| 9 | Standards and Industry Trends | [PDF](guides/pdf/09-standards-and-industry-trends.pdf) | [docx](guides/09-standards-and-industry-trends.docx) | 2 | 2 | 40 min | 3.0 | 17 | 14 | 4 |
+| | **Total** | | | **45** | **80** | 1,110 min | | **257** | **205** | **74** |
 
 The `.docx` files keep a live table of contents (right-click → *Update Field* in Word). The PDFs
 are rendered with the table of contents already filled in, for reading on GitHub or on a phone.
@@ -93,6 +96,7 @@ are drawn from pools of objectives:
 | want the official documents, the syllabus's own references and hands-on practice, mapped to chapters | [`docs/RESOURCES.md`](docs/RESOURCES.md) |
 | want a day-by-day plan | [`docs/STUDY-PLAN.md`](docs/STUDY-PLAN.md) |
 | want the exam mechanics, scoring maths and question formats | [`docs/EXAM-STRATEGY.md`](docs/EXAM-STRATEGY.md) |
+| want to know what was reviewed, corrected and clarified in the guides | [`docs/REVIEW-NOTES.md`](docs/REVIEW-NOTES.md) |
 | are forking or publishing this | [`NOTICE.md`](NOTICE.md) then [`docs/COPYRIGHT-RISK.md`](docs/COPYRIGHT-RISK.md) |
 
 **You still need the official documents.** They are free. Download them before you start —
@@ -103,17 +107,24 @@ this repository.
 
 ## How to use a guide
 
-1. **Section 1 once, slowly.** It walks the learning objectives in syllabus order, quotes the
+1. **Section 2 first if a topic is new to you.** Each card explains one concept in plain words,
+   then how it works, a worked example, how the exam uses it, and what it is easily confused with.
+   It ends with the chapter's **fuzzy points clarified**: the places where the syllabus or the
+   sample exam is easy to misread. Read the storyline (2.1) before anything else in the chapter.
+2. **Section 1 once, slowly.** It walks the learning objectives in syllabus order, quotes the
    wording that gets examined, and shows exactly how the official sample exam used each objective.
-2. **Sections 2 and 3 to compress.** Then rebuild the chapter's key table on blank paper. If you
-   can reproduce the six security test plan elements (Ch3), the requirements checklist and coverage
-   families (Ch4) and the mechanism → weakness → test table (Ch5) from memory, you have already
-   secured a large share of the paper.
-3. **Section 4 with the answer box covered.** Read the rationale even when you were right — the
+   When a passage feels dense, go back to its Section 2 card.
+3. **Section 3 to compress.** Rebuild the chapter's key table on blank paper. If you can reproduce
+   the six security test plan elements (Ch3), the requirements checklist and coverage families
+   (Ch4) and the mechanism → weakness → test table (Ch5) from memory, you have already secured a
+   large share of the paper.
+4. **Section 4 with the answer box covered.** Read the rationale even when you were right — the
    reasoning is the transferable part, not the answer letter.
-4. **Section 5 before the exam.** Distractor patterns, keyword → answer mappings, elimination rules.
-5. **Section 6 daily.** Spaced repetition; three clean passes per chapter.
-6. **Section 7 the night before.** One-page summary, last-minute sheet, exam-day checklist.
+5. **Section 5 before the exam.** Distractor patterns, keyword → answer mappings, elimination rules.
+6. **Section 6 the night before.** One-page summary, last-minute sheet, exam-day checklist.
+
+**Daily habit:** cover one Section 2 card and explain it aloud with your own example. If you cannot
+give the example, you do not understand it yet. Go back to the card.
 
 ---
 
@@ -168,15 +179,17 @@ istqb-ct-sec-study-guide/
 │   ├── RESOURCES.md            ← official documents, cited references, practice — mapped to chapters
 │   ├── STUDY-PLAN.md           ← four-week and ten-day schedules
 │   ├── EXAM-STRATEGY.md        ← scoring maths, question formats, time budget
+│   ├── REVIEW-NOTES.md         ← what was corrected and clarified, and why
 │   └── COPYRIGHT-RISK.md       ← read before making a fork public
 └── tools/                      ← the generators; the guides are built, not hand-written
     ├── render.js               ← shared renderer, owns all styling
     ├── build_common.js         ← shared cover page, contents and assembly
     ├── sec_ch<N>_content1|2|3.js ← chapter content as typed blocks
+    ├── sec_ch<N>_concepts.js   ← Section 2: the key-concept explanations
     ├── build_sec_ch<N>.js      ← per-chapter entry point (chapter metadata)
     ├── build_all.sh            ← rebuild all nine guides and PDFs
     ├── to_pdf.py               ← LibreOffice/UNO PDF export with the TOC populated
-    └── verify.sh               ← page / question / flashcard / markup checks
+    └── verify.sh               ← page / question / concept / markup checks
 ```
 
 **The guides are generated.** To fix a typo, edit the relevant `tools/sec_ch<N>_content*.js` and

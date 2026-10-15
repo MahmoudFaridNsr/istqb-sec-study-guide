@@ -73,21 +73,8 @@ module.exports = function () {
 
   // ================= SECTION 2 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 Evaluation" });
-  B.push({ ul: [
-    "Completion = results evaluated against **security expectations, exit criteria and/or acceptance criteria**.",
-    "Risks are **not all known at the outset**; expectations **change** (e.g. a new threat).",
-    "Therefore **revisit risk assessments throughout** and feed results into planning and execution.",
-  ] });
-  B.push({ h2: "2.2 Reporting" });
-  B.push({ ul: [
-    "**Need to know**; **conservative sharing** is good practice; negative impact if shared beyond direct stakeholders.",
-    "Security defects are **more sensitive**, usually **higher severity**, under **higher management focus** — reports must be **precise, accurate, timely, well-defined**; agree **how and when** management wants access (dashboard).",
-    "**Early reporting** gives more remediation time.",
-    "Eight report sections; effectiveness depends on **timing, content, recipients, tuning**; **multiple reports** for different stakeholders.",
-  ] });
-  B.push({ h2: "2.3 Chapter 7 keyword glossary" });
+  B.push(...require("./sec_ch7_concepts")());
+  B.push({ h2: "2.4 Chapter 7 keyword glossary" });
   B.push({ table: { head: ["Keyword", "Working definition for the exam"], widths: [3.4, 10.6], rows: [
     ["**acceptance criteria**", "Criteria a system must satisfy to be accepted; security needs belong in them and may need revising as goals evolve."],
     ["**attack vector**", "A path or means by which an attacker gains access to a system."],

@@ -61,6 +61,7 @@ module.exports = function () {
     why: "**(d)** — official rationale: **the first priority is to see if the vulnerability is in the production code and get the problem fixed immediately. C should be the next step to ensure the developers are coding correctly and using all available tools to check for this type of issue. A is incorrect because this is exactly what security testers should be doing. B is incorrect because management permission should always be obtained prior to testing, not afterward.**" } });
 
   B.push({ h2: "Part B — 17 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   B.push({ q: { n: 6, tag: DER, meta: "LO: AS-6.1.1 (K2) | Syllabus §6.1.1", correct: ["b"],
     stem: "According to the syllabus, what is the key phase in any attack?",

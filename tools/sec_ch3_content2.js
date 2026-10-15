@@ -71,6 +71,7 @@ module.exports = function () {
     why: "**(b)** — official rationale: **the first priority is to see if the problem exists in the production version. The defect should be documented only in a secure defect tracking system since the problem may exist in production. Since one XSS issue was found, there may be others so continued testing is warranted.** (a) **the defect should not be publicized in the stakeholder report**. (c) **while further testing is needed, notification is critical**. (d) **because of the stakeholder reporting**." } });
 
   B.push({ h2: "Part B — 20 additional syllabus-derived questions" });
+  B.push({ lead: "The K-level in each question’s label is the level of the **learning objective** it practises, not of the question itself. Some Part B items are quick recall checks on a K3 or K4 objective. Use them to learn the facts, and use the scenario items (and Part A) to practise the reasoning the real K3/K4 questions need." });
 
   B.push({ q: { n: 7, tag: DER, meta: "LO: AS-3.1.1 (K3) | Syllabus §3.1.1", correct: ["d"],
     stem: "A tester reviews the latest security risk assessment, the security requirements and the password policy, and then defines test conditions for each identified risk and the tools applicable to each. Which security test process step is this?",

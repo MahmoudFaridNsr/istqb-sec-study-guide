@@ -186,38 +186,8 @@ module.exports = function () {
 
   // ================= SECTION 2 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 How security testing differs" });
-  B.push({ ul: [
-    "Standard **input selection techniques may miss** security issues; **symptoms differ** from functional defects.",
-    "It **attempts to compromise the security policy** to assess vulnerability to threats.",
-    "Threats to explore: **unauthorized copying · unauthorized access · unintended side effects · XSS · buffer overflow · DoS · man in the middle · breaking encryption · logic bombs**.",
-    "Must be **integrated with all other development and testing activities**.",
-  ] });
-  B.push({ h2: "2.2 Purpose and context" });
-  B.push({ ul: [
-    "**Cannot guarantee safety**; **identifies risks** and **evaluates defenses**; supplemented by **audits and reviews**.",
-    "**Due diligence** → possible **legal defense**; **assurance** → confidence and trust of clients.",
-    "**Extent driven by security-based business risk.** Often **specialist / outsourced**.",
-    "**Lifecycle activity** — can’t be **patched or tested into** code.",
-    "Success depends on **time, resources, scope, risk levels, skills, lifecycle approach**.",
-  ] });
-  B.push({ h2: "2.3 Objectives, IA and scope" });
-  B.push({ ul: [
-    "**Security policy** (senior management) **→ security testing policy** aligned to it; otherwise **unauthorized tests** or **purposes missed**.",
-    "**≥ 1 objective per security feature**, plus objectives from **technology attributes** and **known vulnerabilities**.",
-    "**IA ⊃ security testing** (as QA ⊃ testing). IA = availability, integrity, authentication, confidentiality, non-repudiation + restoration.",
-    "**More integrity need → more coverage.** Scope **too small → no confidence**; **too large → resources depleted**.",
-  ] });
-  B.push({ h2: "2.4 Approaches, failures, stakeholders, KPIs" });
-  B.push({ ul: [
-    "**Strategy** = organization’s overall direction. **Approach** = project-level blend of techniques, tools and skills, consistent with policy and strategy.",
-    "**Thirteen factors** shape the approach (source, previous testing, policies, risk assessments, environment, skills, risks, structures, tool experience, constraints, assumptions).",
-    "**Degrees of failure**; use **root cause analysis**; twelve causes (leadership, resources, implementation, support, alignment, understanding, information, tools, skills).",
-    "**Business case to management**; six stakeholder groups, six benefits.",
-    "**KPIs:** coverage of risks, of policies/practices, of requirements; **effectiveness by when and where vulnerabilities were found, pre- and post-release**.",
-  ] });
-  B.push({ h2: "2.5 Chapter 2 keyword glossary" });
+  B.push(...require("./sec_ch2_concepts")());
+  B.push({ h2: "2.6 Chapter 2 keyword glossary" });
   B.push({ table: { head: ["Keyword", "Working definition for the exam"], widths: [3.4, 10.6], rows: [
     ["**cross-site scripting**", "Code inserted into a web page that may be exercised by subsequent users; may be malicious."],
     ["**data obfuscation**", "Making data non-understandable to humans — here named as something **testing may require** for test data (detail in Chapter 5)."],

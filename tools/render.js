@@ -215,23 +215,60 @@ function question(q) {
   out.push(new Paragraph({ spacing: { after: 120 }, children: [] }));
   return out;
 }
-function flashcards(cards) {
-  const rows = [];
-  cards.forEach(([front, back], i) => {
+// A key-concept card: a title bar, then labelled rows that build understanding step by step —
+// what it means in plain words, how it works, an example, how the exam uses it, and what it is
+// commonly confused with. Every row is optional except the title.
+const CONCEPT_ROWS = [
+  ["plain", "In plain words"],
+  ["how", "How it works"],
+  ["test", "How to test it"],
+  ["defend", "How to defend"],
+  ["method", "Method"],
+  ["why", "Why it matters"],
+  ["example", "Example"],
+  ["exam", "Exam angle"],
+  ["confuse", "Don’t confuse"],
+  ["remember", "Remember"],
+];
+function concept(c) {
+  const LW = 1750;
+  const rows = [new TableRow({
+    cantSplit: true, tableHeader: true,
+    children: [new TableCell({
+      columnSpan: 2,
+      width: { size: CW, type: WidthType.DXA },
+      shading: { type: ShadingType.CLEAR, fill: NAVY, color: "auto" },
+      margins: { top: 80, bottom: 80, left: 140, right: 140 },
+      children: [new Paragraph({ keepNext: true, spacing: { after: 0 }, children: runs(c.title, { bold: true, size: 20, color: "FFFFFF", font: FONT }) })],
+    })],
+  })];
+  CONCEPT_ROWS.forEach(([key, label]) => {
+    if (!c[key]) return;
+    const exam = key === "exam", confuse = key === "confuse";
+    const fill = exam ? GREENBG : confuse ? AMBERBG : (key === "plain" ? LIGHT : undefined);
+    const lc = exam ? GREEN : confuse ? AMBER : NAVY;
     rows.push(new TableRow({
+      cantSplit: true,
       children: [
-        cell("FRONT", { w: 900, fill: NAVY, bold: true, color: "FFFFFF", fs: 16 }),
-        cell(`${i + 1}. ${front}`, { w: CW - 900, fill: "F5F8FC", bold: true, fs: 18 }),
-      ],
-    }));
-    rows.push(new TableRow({
-      children: [
-        cell("BACK", { w: 900, fill: LIGHT, bold: true, fs: 16 }),
-        cell(back, { w: CW - 900, fs: 17 }),
+        new TableCell({
+          width: { size: LW, type: WidthType.DXA },
+          shading: { type: ShadingType.CLEAR, fill: fill || ZEBRA, color: "auto" },
+          margins: { top: 70, bottom: 70, left: 110, right: 90 },
+          children: [new Paragraph({ spacing: { after: 0 }, children: runs(label, { bold: true, size: 17, color: lc, font: FONT }) })],
+        }),
+        new TableCell({
+          width: { size: CW - LW, type: WidthType.DXA },
+          shading: fill ? { type: ShadingType.CLEAR, fill, color: "auto" } : undefined,
+          margins: { top: 70, bottom: 70, left: 120, right: 120 },
+          children: (Array.isArray(c[key]) ? c[key] : [c[key]]).map((t, i, arr) => new Paragraph({
+            spacing: { after: i === arr.length - 1 ? 0 : 50, line: 258 },
+            children: runs(t, { size: 18, font: FONT }),
+          })),
+        }),
       ],
     }));
   });
-  return new Table({ columnWidths: [900, CW - 900], width: { size: CW, type: WidthType.DXA }, borders: gridBorders, rows });
+  return new Table({ columnWidths: [LW, CW - LW], width: { size: CW, type: WidthType.DXA }, borders: boxBorders(NAVY), rows });
 }
 
 function render(blocks) {
@@ -256,7 +293,7 @@ function render(blocks) {
     else if (b.table) { out.push(b.table.title ? h3(b.table.title) : null); out.push(table(b.table)); spacer(i); }
     else if (b.box) { out.push(box(b.box)); spacer(i); }
     else if (b.q) out.push(...question(b.q));
-    else if (b.flash) { out.push(flashcards(b.flash)); }
+    else if (b.concept) { out.push(concept(b.concept)); spacer(i); }
     else if (b.pagebreak) out.push(new Paragraph({ children: [new PageBreak()] }));
     else if (b.spacer) out.push(new Paragraph({ spacing: { after: b.spacer }, children: [] }));
   });

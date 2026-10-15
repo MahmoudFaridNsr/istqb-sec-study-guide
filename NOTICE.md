@@ -150,7 +150,7 @@ solution.
 
 The parts of this repository that are **not** ISTQB® material — the chapter guide structure, the
 explanations and commentary, the derived practice questions, the mnemonics, the comparison tables,
-the flashcards, the study plans, the exam tactics, the reference curation, the build tooling and all
+the key-concept explanations, the study plans, the exam tactics, the reference curation, the build tooling and all
 Markdown documentation — are the maintainer's own work and are licensed under **CC BY-NC-SA 4.0**.
 See [`LICENSE`](LICENSE).
 

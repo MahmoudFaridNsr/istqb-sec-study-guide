@@ -126,7 +126,7 @@ module.exports = function () {
   ] });
   B.push({ h3: "What the auditor does — static and dynamic tasks" });
   B.push({ p: "Tools such as **password audit tools** help test whether controls accomplish their goals and generate data for later risk assessment. The auditor looks for **“proof” of compliance** to policies, controls and standards. Some tasks are **static**, others — such as **observing processes in action** — are **dynamic**:" });
-  B.push({ table: { head: ["Auditor task", "Static or dynamic?"], widths: [10.0, 4.0], rows: [
+  B.push({ table: { head: ["Auditor task", "Static or dynamic? (guide’s reading)"], widths: [10.0, 4.0], rows: [
     ["Reviews **system documentation**", "Static"],
     ["**Surveys** people on their perception of effectiveness", "Static (opinion)"],
     ["**Interviews** key personnel involved in the controlled processes", "Static (opinion)"],
@@ -136,6 +136,7 @@ module.exports = function () {
     ["Reviews **technical control configuration** — firewall, IDS configuration", "Static"],
     ["**Samples data transactions** for anomalies or suspicious transactions", "Dynamic / evidence-based"],
   ] } });
+  B.push({ lead: "The syllabus names only **witnessing processes in action** as a dynamic task. The other labels in this table are this guide’s reading and are not examined as such." });
   B.push({ h3: "Controls — three types, four functions" });
   B.push({ p: "**Security controls are technical or administrative safeguards or countermeasures to avoid, counteract or minimize loss or unavailability due to threats acting on their matching vulnerability**, i.e. security risk [Northcutt, 2014]. Example: in a payroll system, **two people must separately approve a change to an employee’s pay rate**. Security testers must know their organization’s controls and **include tests for them**." });
   B.push({ table: { head: ["Control types (categories)", "Specific controls under each category"], widths: [6.0, 8.0], rows: [
@@ -226,54 +227,7 @@ module.exports = function () {
 
   // ================= SECTION 2 =================
   B.push({ pagebreak: true });
-  B.push({ h1: "Section 2 — Key Concepts" });
-  B.push({ h2: "2.1 Risk, security risk and risk exposure" });
-  B.push({ ul: [
-    "**Risk** = function of **adverse impact** and **likelihood of occurrence**.",
-    "**Information security risk** = risk from **loss of confidentiality, integrity or availability** (the CIA triad).",
-    "**Risk exposure** = **impact × likelihood** — the measure used to prioritise security risks.",
-    "**Risk identification** documents a risk; **risk assessment** assigns it a value; **mitigation** follows from severity.",
-    "**Security test objectives are based on security risks** identified through a **security risk assessment**.",
-  ] });
-  B.push({ h2: "2.2 What the risk assessment gives security testing" });
-  B.push({ ul: [
-    "A **rich source of information** for planning and designing security tests.",
-    "A basis to **prioritize** tests — most rigor and coverage where **risk exposure is greatest**.",
-    "**Alignment with business security objectives** — only if it accurately reflects **threats, impacted stakeholders and assets**.",
-    "It is **a snapshot** — repeat at regular intervals (**3–6 months** to **annually**).",
-    "Risks get missed through **lack of information** or **lack of understanding** — use **an established methodology as a checklist** and **input from multiple people**.",
-  ] });
-  B.push({ h2: "2.3 Asset identification — five questions" });
-  B.push({ ol: [
-    "**Which** assets are valuable? (information · physical · intangible: prototypes, ability to deliver services, reputation and trust)",
-    "**How valuable**? (future revenue · competitor value · recreation effort · fines for not producing · fines for losing customer data)",
-    "**Where** are the digital assets? (servers, old media, mobile, thumb drives, cloud)",
-    "**How** are they accessed? (LAN/Wi-Fi · VPN/cloud drive · physical media passed hand to hand · email)",
-    "**How** are they secured? (encryption — who has the keys · authentication and tokens · authorization levels)",
-  ] });
-  B.push({ h2: "2.4 Risk assessment process (NIST 800-30)" });
-  B.push({ ul: [
-    "**Prepare:** purpose · scope · assumptions and constraints · information sources · risk model and analytic approach.",
-    "**Conduct:** threat sources → threat events → vulnerabilities and predisposing conditions → likelihood → impact.",
-    "**Communicate and share:** communicate results · share information to support other risk management activities.",
-    "**External stakeholders:** customers and users (perspective, input, communication) · public and society (community responsibility) · **regulatory agencies (compliance with law)**.",
-  ] });
-  B.push({ h2: "2.5 Policies, procedures and controls" });
-  B.push({ ul: [
-    "**Basis of all security policies = a security risk assessment.**",
-    "**Policies, standards, guidelines** say **what controls** should be in place; **procedures** say **how**, step by step.",
-    "**Controls** = safeguards or countermeasures that avoid, counteract or minimize loss. **Types: administrative, technical, physical. Functions: preventive, detective, corrective, recovery.** Provide controls **from each category**.",
-    "**Evaluating policies** needs: objectives, adequacy criteria (COBIT, ISO 27001, PCI), resources, measures, location, a **checklist**.",
-    "**Effectiveness is shown by security test results** — a policy can be in place, followed, and still ineffective.",
-  ] });
-  B.push({ h2: "2.6 Auditing" });
-  B.push({ ul: [
-    "**Security audit** = **manual examination and evaluation** identifying weaknesses in security processes and infrastructure. Procedural level: manual. Architectural level: often with tools.",
-    "**Audit scope is larger than testing**; audits cover what is **hard to test directly** (procedures, policies, controls).",
-    "**Five pillars:** assessment · prevention · detection · reaction · recovery.",
-    "**Typical findings:** physical security · password maintenance · user rights and sharing · server-level security · **vendor security updates** · intrusion detection · response plans.",
-    "**Auditing identifies; testing proves.**",
-  ] });
+  B.push(...require("./sec_ch1_concepts")());
   B.push({ h2: "2.7 Chapter 1 keyword glossary" });
   B.push({ table: { head: ["Keyword", "Working definition for the exam"], widths: [3.4, 10.6], rows: [
     ["**data privacy**", "Protection of personal and sensitive data from unauthorized disclosure — the subject of the 0–9 scoring example and of the Electronic Monitoring and Privacy policy."],
